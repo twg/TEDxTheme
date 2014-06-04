@@ -96,7 +96,6 @@ class TeamPostType {
     }
 
     function team_member_columns_content ($column) {
-        global $post;
         switch ($column) {
             case 'job_description':
                 echo get_post_meta(get_the_ID(), '_team_job_description', true);
