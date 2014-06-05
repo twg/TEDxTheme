@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* line 17, ../../app/assets/stylesheets/application.css.scss */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* line 21, ../../app/assets/stylesheets/application.css.scss */
+body {
+    font-size: 16px;
+}
+
+/* line 25, ../../app/assets/stylesheets/application.css.scss */
+.white-bg {
+    background-color: #ffffff;
+}
+
+/* line 29, ../../app/assets/stylesheets/application.css.scss */
+.black-bg {
+    background-color: #181818;
+}
+
+/* line 33, ../../app/assets/stylesheets/application.css.scss */
+.gutter-left {
+    margin-left: 15px;
+}
+
+/* line 37, ../../app/assets/stylesheets/application.css.scss */
+.gutter-right {
+    margin-right: 15px;
+}
+
+/* line 41, ../../app/assets/stylesheets/application.css.scss */
+.gutter-top {
+    margin-top: 15px;
+}
+
+/* line 45, ../../app/assets/stylesheets/application.css.scss */
+.gutter-bottom {
+    margin-bottom: 15px;
+}
+
+/* line 49, ../../app/assets/stylesheets/application.css.scss */
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 11px;
+    color: #666666;
+}
+/* line 55, ../../app/assets/stylesheets/application.css.scss */
+footer .ir {
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr;
+    *line-height: 0;
+}
+/* line 67, ../../app/assets/stylesheets/application.css.scss */
+footer .ir br {
+    display: none;
+}
+/* line 71, ../../app/assets/stylesheets/application.css.scss */
+footer .built-by {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 17px;
+}
+/* line 77, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners {
+    font-size: 12px;
+}
+/* line 81, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners a {
+    display: inline-block;
+}
+/* line 85, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners .ir {
+    background: transparent url("http://tedxtoronto.com.s3.amazonaws.com/themes/tedx/images/defaults/sprite-logos.png") no-repeat left 0;
+}
+/* line 89, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners .jc-link {
+    vertical-align: top;
+    width: 123px;
+    height: 42px;
+}
+/* line 95, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners .jc-link:hover {
+    background-position: left -50px;
+}
+/* line 99, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners .twg-link {
+    width: 126px;
+    height: 30px;
+    background-position: left -100px;
+}
+/* line 105, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners .twg-link:hover {
+    background-position: left -130px;
+}
+/* line 109, ../../app/assets/stylesheets/application.css.scss */
+footer .web-partners span,
+footer .web-partners img {
+    vertical-align: middle;
+}
+
+/* line 116, ../../app/assets/stylesheets/application.css.scss */
+header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* line 120, ../../app/assets/stylesheets/application.css.scss */
+header .header-date-location {
+    color: #999999;
+    line-height: 1.4;
+    margin-top: 4px;
+    padding: 0 15px 0 18px;
+    margin-left: 5px;
+    border-left: solid 1px #333333;
+}
+/* line 127, ../../app/assets/stylesheets/application.css.scss */
+header .header-date-location .date {
+    font-weight: bold;
+    display: block;
+}
+/* line 135, ../../app/assets/stylesheets/application.css.scss */
+header .call-to-action {
+    padding-top: 10px;
+}
+/* line 137, ../../app/assets/stylesheets/application.css.scss */
+header .call-to-action .copy {
+    padding-right: 10px;
+    padding-top: 6px;
+    color: #ffffff;
+}
+
+/* line 145, ../../app/assets/stylesheets/application.css.scss */
+.banner {
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+/* line 151, ../../app/assets/stylesheets/application.css.scss */
+.banner .banner-container {
+    width: 75%;
+    background-color: rgba(100, 100, 100, 0.65);
+    padding: 20px;
+    margin: auto;
+    margin-top: 115px;
+    margin-bottom: 115px;
+}
+/* line 159, ../../app/assets/stylesheets/application.css.scss */
+.banner h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/* line 165, ../../app/assets/stylesheets/application.css.scss */
+.contents {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
