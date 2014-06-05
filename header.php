@@ -26,8 +26,16 @@
         <header>
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <?php $logo = ot_get_option('logo'); ?>
-                    <img src="<?php echo $logo['background-image']; ?>" height="50" width="229" alt="Logo" class="pull-left">
+
+                    <?php
+                    $logo = ot_get_option('logo', 'http://placehold.it/229x50.png');
+                    if(array_key_exists('background-image', $logo)):
+                        $logo_url = $logo['background-image'];
+                    else:
+                        $logo_url = $logo;
+                    endif;
+                    ?>
+                    <img src="<?php echo $logo_url; ?>" height="50" width="229" alt="Logo" class="pull-left">
 
                     <div class="header-date-location pull-left">
                         <time class="date" datetime="2014-10-02">October 2nd, 2014</time>
