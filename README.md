@@ -4,7 +4,12 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
 
 ### Requirements
 
-* `PHP 5.2.4 or greater`
-* `MySQL 5.0 or greater`
-* `The mod_rewrite Apache module`
+* **PHP 5.2.4** or greater
+* **MySQL 5.0** or greater
+* The **mod_rewrite** Apache module
+* A recent version of **WordPress**
 
+### Installation (Developers)
+
+* `cd /wordpress/wp-content`
+* `git clone git@github.com:twg/TEDxTheme.git`
