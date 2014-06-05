@@ -151,7 +151,7 @@ class TeamPostType {
         $team_members = $this->get_team_members();
         $path         = dirname(dirname(dirname(__FILE__)));
         ob_start();
-        require($path . '/page-templates/_team_members_shortcode_item.php');
+        require($path . '/includes/custom_post_types/team/team_members_shortcode_item.php');
         $output = ob_get_clean();
 
         return $output;

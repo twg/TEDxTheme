@@ -14,8 +14,6 @@
     <link href='<?php echo get_template_directory_uri(); ?>/vendor/stylesheets/tedx.css' type='text/css' media='all' rel='stylesheet'  />
 
 
-
-
     <?php wp_head(); ?>
 </head>
 
@@ -27,22 +25,28 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <?php $logo = ot_get_option('logo'); ?>
-                    <img src="<?php echo $logo['background-image']; ?>" height="50" width="229" alt="Logo" class="pull-left">
+                    <a href="<?php echo ot_get_option('logo_link'); ?>">
+                        <img src="<?php echo $logo['background-image']; ?>" height="50" width="229" alt="Logo" class="pull-left">
+                    </a>
 
                     <div class="header-date-location pull-left">
-                        <time class="date" datetime="2014-10-02">October 2nd, 2014</time>
-                        <span class="location">Koerner Hall</span>
+                        <time class="date" datetime="2014-10-02"><?php echo ot_get_option('event_date') ?></time>
+                        <span class="location"><?php echo ot_get_option('event_location') ?></span>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="call-to-action">
-                        <button class="btn btn-danger pull-right">Apply Now</button>
-            <span class="copy pull-right clear">
-              Submit a speaker, performer or demo nomination
-            </span>
+                        <a href="<?php echo ot_get_option('callout_link'); ?>" class="btn btn-danger pull-right"><?php echo ot_get_option('button_callout_text') ?></a>
+                        <span class="copy pull-right clear"><?php echo ot_get_option('header_callout') ?></span>
                     </div>
                 </div>
             </div>
+
+            <div class="nav-list pull-left" id="menu-primary-navigation">
+                <?php wp_nav_menu($menus['header']); ?>
+                <?php $mainnav_loaded = true; ?>
+            </div>
+
         </header>
     </div>
 </div>
