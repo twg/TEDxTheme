@@ -7,6 +7,7 @@ require_once 'includes/renderer.php';
 require_once 'includes/advanced_custom_fields/template_home.php';
 
 // Admin Includes
+require_once 'includes/admin/plugin_dependencies.php';
 require_once 'includes/admin/option_tree.php';
 
 // Custom Post Types
