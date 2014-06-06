@@ -18,6 +18,14 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
     * [Option Tree](https://wordpress.org/plugins/option-tree/)
 
 
+### Development
+
+We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs.com/) and [Bower](http://bower.io/). You'll need to have `npm` installed before getting started. Development requires an understanding of the following commands:
+
+* `npm install` - Install development dependencies
+* `gulp watch` - Starts the Grunt task that builds css and js. Also has a livereload server running
+* `gulp vendor-js vendor-css` - Concats and minifies Bower dependencies into a single `plugin.min.js` file. These dependencies are declared in the `Gulpfile.js`. To add a new plugin we recommend installing it with Bower and then declaring it in the gulp file.
+
 ### Custom Post Types
 
 #### Partners
