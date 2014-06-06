@@ -1,0 +1,144 @@
+@import "styleguide/default.min.css";
+@import "styleguide/googlecode.min.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body{
+  background: white;
+  font-family: arial;
+  max-width: 640px;
+  margin: 15px auto;
+  padding: 15px;
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section.sg{
+  padding: 0;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  background: #FAFAFA;
+  padding: 15px;
+  border: 0;
+  border-top: 5px solid #E8E9EA;
+}
+
+section.sg:last-child{
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h1.sg, h2.sg, h3.sg, h4.sg, h5.sg, h6.sg{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+h2.sg{
+  font-size: 26px;
+  color: black;
+  margin-top: -9px;
+}
+
+h3.sg{
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+  padding-bottom: 0;
+  background: white;
+}
+
+.sg-code pre{
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.sg-code pre, .sg-code code{
+  margin: 0;
+}
+
+.sg-code code{
+  overflow: auto;
+  padding: 10px;
+}
+
+.sg-code-output{
+  padding: 10px;
+  background: white;
+  border-bottom: 2px solid #FAFAFA;
+}
+
+.sg-item{
+  padding-bottom: 15px;
+}
+
+.sg-item:last-child{
+  padding-bottom: 0;
+}
+
+.sg-item p{
+  padding: 10px;
+  background: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+.sg-item:hover pre{
+  max-height: 200px;
+}
+
+.sg-swatches{
+  margin-top: 0;
+  background: white;
+  padding: 15px;
+}
+
+.sg-swatch{
+  margin-bottom: 10px;
+}
+
+.sg-swatch:last-child{
+  margin-bottom: 0;
+}
+
+.sg-swatch-sample{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sg-swatch-info{
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sg-swatch-value{
+  background: #FAFAFA;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+nav.sg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  background: #FAFAFA;
+}
+
+nav.sg a{
+  display: block;
+  text-transform: lowercase;
+  text-decoration: none;
+  padding: 3px 0;
+}

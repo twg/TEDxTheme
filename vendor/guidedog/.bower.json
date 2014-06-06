@@ -1,0 +1,31 @@
+{
+  "name": "guidedog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/themarkappleby/guidedog",
+  "authors": [
+    "Mark Appleby <themarkappleby@gmail.com>"
+  ],
+  "description": "Create platform agnostic living styleguides with ease",
+  "keywords": [
+    "styleguide"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.0",
+    "commit": "b2e3cfde44751f88f97b186e3649c51b9273376d"
+  },
+  "_source": "git://github.com/themarkappleby/guidedog.git",
+  "_target": "~0.0.0",
+  "_originalSource": "guidedog",
+  "_direct": true
+}
