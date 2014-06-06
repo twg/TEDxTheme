@@ -1,0 +1,37 @@
+{
+  "name": "TEDxTheme",
+  "version": "1.0.0",
+  "description": "A TEDx WordPress theme built by The Working Group (http://twg.ca) and TEDxToronto.",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-livereload": "^2.0.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-notify": "^1.3.1",
+    "gulp-clean": "^0.3.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-jshint": "^1.6.2",
+    "gulp-cache": "^0.1.11",
+    "gulp-rename": "^1.2.0",
+    "tiny-lr": "0.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twg/TEDxTheme.git"
+  },
+  "author": "Emerson Lackey & Bill Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twg/TEDxTheme/issues"
+  },
+  "homepage": "https://github.com/twg/TEDxTheme"
+}
