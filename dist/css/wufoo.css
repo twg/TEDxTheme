@@ -1,0 +1,188 @@
+form.wufoo .info {
+  display: none !important; }
+  form.wufoo .info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #666666; }
+form.wufoo .section h3, form.wufoo .info div {
+  font-weight: normal;
+  font-size: 22px;
+  margin: 0 0 10px;
+  color: #333333;
+  line-height: 1.4; }
+form.wufoo .section div {
+  color: #666666;
+  font-size: 14px; }
+form.wufoo .info, form.wufoo .paging-context {
+  border-bottom: solid 1px #e5e5e5; }
+form.wufoo .section h3, form.wufoo .captcha, form.wufoo #payment .paging-context {
+  border-top: solid 1px #e5e5e5; }
+form.wufoo li {
+  padding-top: 10px;
+  padding-bottom: 20px; }
+  form.wufoo li.focused {
+    background-color: transparent; }
+  form.wufoo li.buttons {
+    padding-top: 30px;
+    border-top: solid 1px #e5e5e5; }
+  form.wufoo li span + span {
+    margin-left: 20px; }
+form.wufoo fieldset span + span {
+  margin-left: 0; }
+form.wufoo label.desc, form.wufoo legend.desc {
+  font-size: 16px;
+  color: #666666 !important;
+  font-weight: normal !important; }
+form.wufoo textarea + label, form.wufoo input + label {
+  font-size: 11px;
+  color: #999999 !important; }
+form li.error label, form li.error span.symbol {
+  color: #999999 !important; }
+form.wufoo label.choice {
+  line-height: 25px !important; }
+form.wufoo p.instruct {
+  color: #666666;
+  border: none;
+  margin-top: 5px !important;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+  form.wufoo p.instruct small {
+    color: #666666; }
+form.wufoo input.file, form.wufoo input.text {
+  font-size: 14px;
+  background: #f5f5f5;
+  border: 1px solid #dddddd !important;
+  color: #999999;
+  border-radius: 3px;
+  padding: 0 10px;
+  line-height: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+form.wufoo textarea.textarea, form.wufoo input.file, form.wufoo select.select, form.wufoo input, form.wufoo textarea {
+  font-size: 14px;
+  background: #f5f5f5;
+  border: 1px solid #dddddd !important;
+  color: #999999;
+  border-radius: 3px;
+  padding: 0 10px;
+  line-height: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+form.wufoo input.file:focus, form.wufoo input.text:focus {
+  background: #fff;
+  color: #666666; }
+form.wufoo textarea.textarea:focus, form.wufoo input.file:focus, form.wufoo select.select:focus, form.wufoo input:focus {
+  background: #fff;
+  color: #666666; }
+form.wufoo textarea {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important; }
+  form.wufoo textarea:focus {
+    background: #fff;
+    color: #666666; }
+form.wufoo input {
+  height: 33px; }
+form.wufoo select.select {
+  height: 33px;
+  max-width: 100%;
+  padding: 5px 0 5px 10px; }
+form.wufoo input[type="radio"], form.wufoo input[type="checkbox"] {
+  background: #999 !important;
+  height: auto;
+  position: relative;
+  top: 2px;
+  width: auto;
+  padding: 0 !important;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  border-color: transparent !important; }
+
+/*================ Text Styles ================*/
+/* top header info to be hidden by default */
+/* but just in case */
+/* section info */
+/*================ General Layout ================*/
+/*================ Labels ================*/
+/* sub - labels */
+/* checkbox - labels */
+/* helper text */
+/*================ Inputs ================*/
+.msie form.wufoo input[type="radio"], .msie form.wufoo input[type="checkbox"] {
+  background: transparent !important; }
+
+form.wufoo .submit {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  font-size: 12px;
+  padding: 11px !important;
+  color: #fff !important;
+  line-height: 12px !important;
+  border-radius: 3px !important;
+  background: #ff2b06 !important;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  text-transform: uppercase;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -ms-filter: none !important;
+  -webkit-filter: none !important;
+  filter: none !important;
+  font-weight: bold;
+  height: auto; }
+  form.wufoo .submit:hover {
+    background: #c61e1e !important;
+    color: #fff; }
+  form.wufoo .submit:focus, form.wufoo .submit:active {
+    background: #af1313 !important; }
+form.wufoo #errorLi {
+  display: none; }
+form.wufoo li.error {
+  background-color: transparent !important;
+  margin-bottom: 0 !important; }
+  form.wufoo li.error p.error {
+    float: left;
+    margin-left: 33% !important;
+    line-height: 15px !important;
+    padding-top: 5 !important;
+    font-size: 14px;
+    font-weight: normal;
+    color: #db2626 !important; }
+form.wufoo form li.error .desc {
+  color: #db2626 !important; }
+form.wufoo .error textarea, form.wufoo .error input {
+  border-color: #db2626; }
+
+/*================ Error States ================*/
+/* top level error msg */
+/*================ Responsive ================*/
+@media (max-width: 767px) {
+  .leftLabel .desc, .rightLabel .desc {
+    width: 100% !important; }
+  form.wufoo .leftLabel .desc, form.wufoo .rightLabel .desc, form.wufoo input.text, form.wufoo select, form.wufoo li div, form.wufoo label.desc {
+    width: 100% !important; }
+  form.wufoo select, form.wufoo textarea + label, form.wufoo input + label {
+    font-size: 12px !important; }
+  form.wufoo li.error p.error {
+    font-size: 12px;
+    margin-left: 0 !important; }
+  form.wufoo p.instruct {
+    margin-top: 0 !important;
+    font-size: 15px; }
+  form.wufoo li span + span {
+    margin-left: 0; }
+  form.wufoo .buttons {
+    padding-left: 0; }
+    form.wufoo .buttons div {
+      margin-left: 0; } }

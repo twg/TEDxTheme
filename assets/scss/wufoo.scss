@@ -1,0 +1,273 @@
+form {
+
+  &.wufoo {
+    .info {
+      display: none !important;
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-weight: bold;
+        color: #666666;
+      }
+    }
+    .section h3, .info div {
+      font-weight: normal;
+      font-size: 22px;
+      margin: 0 0 10px;
+      color: #333333;
+      line-height: 1.4;
+    }
+    .section div {
+      color: #666666;
+      font-size: 14px;
+    }
+    .info, .paging-context {
+      border-bottom: solid 1px #e5e5e5;
+    }
+    .section h3, .captcha, #payment .paging-context {
+      border-top: solid 1px #e5e5e5;
+    }
+    li {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      &.focused {
+        background-color: transparent;
+      }
+      &.buttons {
+        padding-top: 30px;
+        border-top: solid 1px #e5e5e5;
+      }
+      span + span {
+        margin-left: 20px;
+      }
+    }
+    fieldset span + span {
+      margin-left: 0;
+    }
+    label.desc, legend.desc {
+      font-size: 16px;
+      color: #666666 !important;
+      font-weight: normal !important;
+    }
+    textarea + label, input + label {
+      font-size: 11px;
+      color: #999999 !important;
+    }
+  }
+  li.error {
+    label, span.symbol {
+      color: #999999 !important;
+    }
+  }
+  &.wufoo {
+    label.choice {
+      line-height: 25px !important;
+    }
+    p.instruct {
+      color: #666666;
+      border: none;
+      margin-top: 5px !important;
+      background: transparent;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      small {
+        color: #666666;
+      }
+    }
+    input {
+      &.file, &.text {
+        font-size: 14px;
+        background: #f5f5f5;
+        border: 1px solid #dddddd !important;
+        color: #999999;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 0 10px;
+        line-height: 30px;
+        max-width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+    }
+    textarea.textarea, input.file, select.select, input, textarea {
+      font-size: 14px;
+      background: #f5f5f5;
+      border: 1px solid #dddddd !important;
+      color: #999999;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 0 10px;
+      line-height: 30px;
+      max-width: 100%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    input {
+      &.file:focus, &.text:focus {
+        background: #fff;
+        color: #666666;
+      }
+    }
+    textarea.textarea:focus, input.file:focus, select.select:focus, input:focus {
+      background: #fff;
+      color: #666666;
+    }
+    textarea {
+      &:focus {
+        background: #fff;
+        color: #666666;
+      }
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    input {
+      height: 33px;
+    }
+    select.select {
+      height: 33px;
+      max-width: 100%;
+      padding: 5px 0 5px 10px;
+    }
+    input {
+      &[type="radio"], &[type="checkbox"] {
+        background: #999 !important;
+        height: auto;
+        position: relative;
+        top: 2px;
+        width: auto;
+        padding: 0 !important;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        border-color: transparent !important;
+      }
+    }
+  }
+}
+
+/*================ Text Styles ================*/
+/* top header info to be hidden by default */
+
+/* but just in case */
+
+/* section info */
+
+/*================ General Layout ================*/
+
+/*================ Labels ================*/
+
+/* sub - labels */
+
+/* checkbox - labels */
+
+/* helper text */
+
+/*================ Inputs ================*/
+
+.msie form.wufoo input {
+  &[type="radio"], &[type="checkbox"] {
+    background: transparent !important;
+  }
+}
+
+form.wufoo {
+  .submit {
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    font-size: 12px;
+    padding: 11px !important;
+    color: #fff !important;
+    line-height: 12px !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px;
+    border-radius: 3px !important;
+    background: #ff2b06 !important;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+    text-transform: uppercase;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -ms-filter: none !important;
+    filter: none !important;
+    font-weight: bold;
+    height: auto;
+    &:hover {
+      background: #c61e1e !important;
+      color: #fff;
+    }
+    &:focus, &:active {
+      background: #af1313 !important;
+    }
+  }
+  #errorLi {
+    display: none;
+  }
+  li.error {
+    background-color: transparent !important;
+    margin-bottom: 0 !important;
+    p.error {
+      float: left;
+      margin-left: 33% !important;
+      line-height: 15px !important;
+      padding-top: 5 !important;
+      font-size: 14px;
+      font-weight: normal;
+      color: #db2626 !important;
+    }
+  }
+  form li.error .desc {
+    color: #db2626 !important;
+  }
+  .error {
+    textarea, input {
+      border-color: #db2626;
+    }
+  }
+}
+
+/*================ Error States ================*/
+/* top level error msg */
+
+/*================ Responsive ================*/
+@media (max-width: 767px) {
+  .leftLabel .desc, .rightLabel .desc {
+    width: 100% !important;
+  }
+  form.wufoo {
+    .leftLabel .desc, .rightLabel .desc, input.text, select, li div, label.desc {
+      width: 100% !important;
+    }
+    select, textarea + label, input + label {
+      font-size: 12px !important;
+    }
+    li.error p.error {
+      font-size: 12px;
+      margin-left: 0 !important;
+    }
+    p.instruct {
+      margin-top: 0 !important;
+      font-size: 15px;
+    }
+    li span + span {
+      margin-left: 0;
+    }
+    .buttons {
+      padding-left: 0;
+      div {
+        margin-left: 0;
+      }
+    }
+  }
+}
