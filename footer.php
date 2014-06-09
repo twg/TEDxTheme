@@ -34,6 +34,7 @@
 <script src="<?php echo $template_url; ?>/dist/js/application.min.js" type="text/javascript"></script>
 
 <!-- Live Reload -->
+<?php define('WP_ENV', 'development'); ?>
 <?php if(defined('WP_ENV') && WP_ENV !== 'production'): ?>
     <script src="http://0.0.0.0:35729/livereload.js?snipver=1"></script>
 <?php endif; ?>
