@@ -43,7 +43,7 @@ class PartnerPostType {
             'menu_icon'            => get_stylesheet_directory_uri() . '/images/custom_post_types/partner.png',
             'show_in_menu'         => true,
             'query_var'            => true,
-            'rewrite'              => array('slug' => 'partners', 'with_front' => false),
+            'rewrite'              => array('slug' => 'partners-archive', 'with_front' => false),
             'capability_type'      => 'post',
             'has_archive'          => true,
             'hierarchical'         => false,
