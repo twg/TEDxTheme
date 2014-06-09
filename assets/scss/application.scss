@@ -1,6 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+//-- Initializers -----------------------------------------------------------
+
+@import "initializers/bootstrap_override";
+
+
+//-- Pages ------------------------------------------------------------------
+
+@import "pages/layout";
+@import "pages/template_home";
+
 //-- Singletons -------------------------------------------------------------
+
 @import "objects/singletons/header";
 @import "objects/singletons/footer";
 
@@ -15,78 +26,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
-
-/* line 17, ../../app/assets/stylesheets/application.css.scss */
-* {
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* line 21, ../../app/assets/stylesheets/application.css.scss */
-body {
-    font-size: 16px;
-}
-
-/* line 25, ../../app/assets/stylesheets/application.css.scss */
-.white-bg {
-    background-color: #ffffff;
-}
-
-/* line 29, ../../app/assets/stylesheets/application.css.scss */
-.black-bg {
-    background-color: #181818;
-}
-
-/* line 33, ../../app/assets/stylesheets/application.css.scss */
-.gutter-left {
-    margin-left: 15px;
-}
-
-/* line 37, ../../app/assets/stylesheets/application.css.scss */
-.gutter-right {
-    margin-right: 15px;
-}
-
-/* line 41, ../../app/assets/stylesheets/application.css.scss */
-.gutter-top {
-    margin-top: 15px;
-}
-
-/* line 45, ../../app/assets/stylesheets/application.css.scss */
-.gutter-bottom {
-    margin-bottom: 15px;
-}
-
-
-/* line 145, ../../app/assets/stylesheets/application.css.scss */
-.banner {
-    color: #FFF;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-/* line 151, ../../app/assets/stylesheets/application.css.scss */
-.banner .banner-container {
-    width: 75%;
-    background-color: rgba(100, 100, 100, 0.65);
-    padding: 20px;
-    margin: auto;
-    margin-top: 115px;
-    margin-bottom: 115px;
-}
-/* line 159, ../../app/assets/stylesheets/application.css.scss */
-.banner h1 {
-    font-size: 80px;
-    font-weight: bold;
-}
-
-/* line 165, ../../app/assets/stylesheets/application.css.scss */
-.contents {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
 
 
 

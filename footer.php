@@ -8,12 +8,11 @@
         <div class="col-md-4">
           <div class="legal">
             This TEDx event is independently organized.<br>
-            Copyright © TEDxToronto 2013. All Rights Reserved.<a href="/legal-and-privacy/">Legal &amp; Privacy</a>
+            Copyright © <?php echo ot_get_option('event_name')?> <?php echo date("Y"); ?>. All Rights Reserved.<a href="/legal-and-privacy/">Legal &amp; Privacy</a>
           </div>
         </div>
         <div class="col-md-3">
-          <a href="https://twitter.com/tedxtoronto" class="twitter-follow-button" data-show-count="false">Follow
-                @tedxtoronto</a>
+          <?php echo ot_get_option('twitter_follow_button'); ?>
         </div>
         <div class="col-md-5">
           <div class="web-partners">
