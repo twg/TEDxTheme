@@ -37,19 +37,32 @@ function custom_theme_options () {
                 'min_max_step' => '',
                 'class'        => ''
             ),
-            array(
-                'id'           => 'twitter_live_widget',
-                'label'        => 'Twitter Live Widget',
-                'desc'         => 'Twitter Live Widget Embed Code. Go to https://twitter.com/settings/widgets to create widgets',
-                'std'          => '',
-                'type'         => 'textarea-simple',
-                'section'      => 'social_media',
-                'rows'         => '',
-                'post_type'    => '',
-                'taxonomy'     => '',
-                'min_max_step' => '',
-                'class'        => ''
-            ),
+          array(
+            'id'           => 'twitter_live_widget',
+            'label'        => 'Twitter Live Widget',
+            'desc'         => 'Twitter Live Widget Embed Code. Go to https://twitter.com/settings/widgets to create widgets',
+            'std'          => '',
+            'type'         => 'textarea-simple',
+            'section'      => 'social_media',
+            'rows'         => '',
+            'post_type'    => '',
+            'taxonomy'     => '',
+            'min_max_step' => '',
+            'class'        => ''
+          ),
+          array(
+            'id'           => 'twitter_follow_button',
+            'label'        => 'Twitter Follow Button',
+            'desc'         => 'Twitter Follow Button. Go to https://about.twitter.com/resources/buttons',
+            'std'          => '',
+            'type'         => 'textarea-simple',
+            'section'      => 'social_media',
+            'rows'         => '',
+            'post_type'    => '',
+            'taxonomy'     => '',
+            'min_max_step' => '',
+            'class'        => ''
+          ),
             array(
                 'id'           => 'twitter_account_widget',
                 'label'        => 'Twitter Account Widget',

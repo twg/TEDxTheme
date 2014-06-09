@@ -12,8 +12,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <a href="https://twitter.com/tedxtoronto" class="twitter-follow-button" data-show-count="false">Follow
-                @tedxtoronto</a>
+          <?php echo ot_get_option('twitter_follow_button'); ?>
         </div>
         <div class="col-md-5">
           <div class="web-partners">

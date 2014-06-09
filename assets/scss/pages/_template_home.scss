@@ -1,0 +1,21 @@
+body.page-template-page_templatestemplate_home-php {
+  .banner {
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    .banner-container {
+      width: 75%;
+      background-color: rgba(100, 100, 100, 0.65);
+      padding: 20px;
+      margin: auto;
+      margin-top: 115px;
+      margin-bottom: 115px;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+    }
+  }
+}
