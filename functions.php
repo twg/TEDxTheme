@@ -1,5 +1,6 @@
 <?php
 add_theme_support('post-thumbnails');
+register_nav_menu('header', 'Main Header Menu');
 
 require_once 'includes/renderer.php';
 
