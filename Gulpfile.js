@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat');
 
+
 //-- Bower Dependencies -----------------------------------------------------
 var bowerJsDependencies = [
   './vendor/jquery/dist/jquery.js',
@@ -19,6 +20,7 @@ var bowerJsDependencies = [
 var bowerCssDependencies = [
   './vendor/bootstrap/dist/css/bootstrap.css'
 ];
+
 
 //-- Compile SCSS -----------------------------------------------------------
 gulp.task('styles', function() {
@@ -67,6 +69,13 @@ gulp.task('vendor-css', function() {
 });
 
 
+//-- Copy Images to the Dist Directory --------------------------------------
+gulp.task('images', function() {
+  return gulp.src('./assets/img/**/*')
+    .pipe(gulp.dest('./dist/img'));
+});
+
+
 //-- Clean task to run before deploys ---------------------------------------
 gulp.task('clean', function() {
   return gulp.src(['./dist/assets/css', './dist/assets/js'], {read: false})
@@ -76,7 +85,7 @@ gulp.task('clean', function() {
 
 //-- Default Task -----------------------------------------------------------
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js');
+  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images');
 });
 
 
@@ -85,6 +94,7 @@ gulp.task('watch', function() {
 
   gulp.watch('./assets/scss/**/*.scss', ['styles']);
   gulp.watch('./assets/js/**/*.js', ['scripts']);
+  gulp.watch('./assets/img/**/*', ['images']);
 
   livereload.listen();
   gulp.watch(['./dist/**', './**/*.php']).on('change', livereload.changed);
