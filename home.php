@@ -23,7 +23,7 @@ $unsticky_posts = $query->unsticky_posts();
 <?php endif; ?>
 
 
-<div class="container">
+<div class="container spacing-top">
   <div class="row">
 
     <div class="col-md-8">

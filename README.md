@@ -1,3 +1,12 @@
+```
+  ________________      ________                      
+ /_  __/ ____/ __ \_  _/_  __/ /_  ___  ____ ___  ___ 
+  / / / __/ / / / / |/_// / / __ \/ _ \/ __ `__ \/ _ \
+ / / / /___/ /_/ />  < / / / / / /  __/ / / / / /  __/
+/_/ /_____/_____/_/|_|/_/ /_/ /_/\___/_/ /_/ /_/\___/ 
+                                                      
+```
+
 # TEDxTheme
 
 This theme has been designed and coded by [The Working Group](http://twg.ca) and [TEDxToronto](http://www.tedxtoronto.com) in the hopes that other TEDx organizations will find this easy to use to promote and manage their own events.
