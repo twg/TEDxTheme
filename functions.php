@@ -1,26 +1,22 @@
 <?php
-add_theme_support('post-thumbnails');
-register_nav_menu('header', 'Main Header Menu');
-register_sidebar([
-  'name'          => 'Primary Sidebar',
-  'class'         => 'sidebar',
-  'before_title'  => '<h4 class="widgettitle">',
-  'after_title'   => "</h2>\n",
-]);
 
+//-- Theme Setup ------------------------------------------------------------
+require_once 'includes/theme-setup.php';
+
+//-- Utilities --------------------------------------------------------------
 require_once 'includes/renderer.php';
 
-// Advanced Custom Fields
+//-- Advanced Custom Fields -------------------------------------------------
 require_once 'includes/advanced_custom_fields/template_home.php';
 
-// Admin Includes
+//-- Admin Inclues ----------------------------------------------------------
 require_once 'includes/admin/plugin_dependencies.php';
 require_once 'includes/admin/option_tree.php';
 
-// Query Helpers
+//-- Theme Query Helpers ----------------------------------------------------
 require_once 'includes/tedx_query.php';
 
-// Custom Post Types
+//-- Custom Post Types ------------------------------------------------------
 require_once 'includes/custom_post_types/partner.php';
 $PartnerPostType = new PartnerPostType();
 
