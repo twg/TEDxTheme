@@ -5,22 +5,6 @@ footer {
   font-size: 11px;
   color: #666666;
 
-  .ir {
-    display: block;
-    border: 0;
-    text-indent: -999em;
-    overflow: hidden;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    text-align: left;
-    direction: ltr;
-    *line-height: 0;
-  }
-
-  .ir br {
-    display: none;
-  }
-
   .built-by {
     display: inline-block;
     vertical-align: bottom;
@@ -29,39 +13,41 @@ footer {
 
   .web-partners {
     font-size: 12px;
+
+    a {
+      display: inline-block;
+    }
+
+    .ir {
+      background: transparent url('../../images/sprite-logos.png') no-repeat left 0;
+    }
+
+    .jc-link {
+      vertical-align: top;
+      width: 123px;
+      height: 42px;
+    }
+
+    .jc-link:hover {
+      background-position: left -50px;
+    }
+
+    .twg-link {
+      width: 126px;
+      height: 30px;
+      background-position: left -100px;
+    }
+    .twg-link:hover {
+      background-position: left -130px;
+    }
+
+    span, img {
+      vertical-align: middle;
+    }
   }
 
-  .web-partners a {
-    display: inline-block;
-  }
-
-  .web-partners .ir {
-    background: transparent url('../../images/sprite-logos.png') no-repeat left 0;
-  }
-
-  .web-partners .jc-link {
-    vertical-align: top;
-    width: 123px;
-    height: 42px;
-  }
-
-  .web-partners .jc-link:hover {
-    background-position: left -50px;
-  }
-
-  .web-partners .twg-link {
-    width: 126px;
-    height: 30px;
-    background-position: left -100px;
-  }
-
-  .web-partners .twg-link:hover {
-    background-position: left -130px;
-  }
-
-  .web-partners span,
-  .web-partners img {
-    vertical-align: middle;
+  .legal {
+    font-size: 11px;
   }
 
 }
