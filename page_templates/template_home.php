@@ -1,5 +1,7 @@
 <?php
-/* Template Name: Homepage */
+/*
+Template Name: Homepage
+*/
 
 get_header();
 ?>

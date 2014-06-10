@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Partners
+Template Name: General Template
 */
 
 get_header();

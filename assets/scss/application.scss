@@ -9,12 +9,13 @@
 
 @import "pages/layout";
 @import "pages/template_home";
-@import "pages/template_partner";
+@import "pages/template_general";
 
 //-- Singletons -------------------------------------------------------------
 
 @import "objects/singletons/header";
 @import "objects/singletons/footer";
+@import "objects/singletons/team_tile";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

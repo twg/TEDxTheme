@@ -191,9 +191,8 @@ class PartnerPostType {
     if ($partner_type !== null) {
       $partners = $this->get_raw_partners_for($partner_type);
       $name = $a['type_name'];
-
       ob_start();
-      require(get_template_directory() . '/page_templates/_template_partner.php');
+      require(get_template_directory() . '/shortcode_templates/partners_shortcode.php');
       $output = ob_get_clean();
     }
     return $output;
