@@ -180,6 +180,11 @@ footer {
     font-size: 12px; }
     #sidebar ul > li.widget_categories ul li a {
       font-size: 14px; }
+#sidebar h2 {
+  font-size: 16px;
+  padding: 0 0 10px 10px;
+  margin: 20px -10px 10px -10px;
+  border-bottom: 1px solid #e9e9e9; }
 
 input[type="text"], input[type="password"] {
   border: 1px solid #e9e9e9;
