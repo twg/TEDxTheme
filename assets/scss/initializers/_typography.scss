@@ -57,6 +57,14 @@ a {
   }
 }
 
+a.btn {
+  color: $light-gray;
+  &:visited, &:active {
+    color: $light-gray;
+
+  }
+}
+
 small {
   font-size: 12px;
 }

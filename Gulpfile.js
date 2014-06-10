@@ -23,7 +23,6 @@ var bowerCssDependencies = [
   './vendor/animate.css/animate.css'
 ];
 
-
 //-- Compile SCSS -----------------------------------------------------------
 gulp.task('styles', function() {
   return gulp.src('./assets/scss/*.scss')

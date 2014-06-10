@@ -1,0 +1,76 @@
+.team-tile {
+  margin-bottom: 25px;
+  overflow: hidden;
+
+  .team-photo {
+    position: relative;
+    max-width: 100%;
+    top: 0;
+  }
+
+  .details-open .team-photo {
+    top: -40px;
+  }
+
+  .team-info {
+    font-size: 14px;
+    background: $red;
+    color: $white;
+    a, h2, .team-role {
+      color: #fff;
+    }
+
+    .team-details-container {
+      padding: 15px;
+      height: 150px;
+      width: 100%;
+      overflow: auto;
+      font-size: 13px;
+    }
+  }
+
+  .team-links {
+    .ico {
+      height: 35px;
+      width: 35px;
+      border-top: solid 1px $red;
+      border-color: rgba(0, 0, 0, 0.1);
+      a {
+        display: block;
+        height: 100%;
+        z-index: 100;
+        position: relative;
+      }
+    }
+
+    .tweet {
+      border-bottom: none;
+      &:before {
+        background-position: -30px -385px;
+        z-index: 10;
+      }
+    }
+  }
+
+  .team-title {
+    padding: 15px 20px;
+    margin-right: 35px;
+    border-right: solid 1px $red;
+    border-color: rgba(0, 0, 0, 0.1);
+    line-height: 1;
+
+    .team-role {
+      font-size: 16px;
+      p {
+        margin: 0;
+      }
+    }
+    h2 {
+      font-size: 16px;
+      margin-top: 0px;
+      margin-bottom: 3px;
+      font-weight: bold;
+      line-height: 19px;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import "../../../vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+
 body.page-template-page_templatestemplate_home-php {
   .banner {
     color: #FFF;
@@ -10,12 +12,62 @@ body.page-template-page_templatestemplate_home-php {
       background-color: rgba(100, 100, 100, 0.65);
       padding: 20px;
       margin: auto;
-      margin-top: 115px;
-      margin-bottom: 115px;
-    }
-    h1 {
-      font-size: 80px;
-      font-weight: bold;
     }
   }
+  @media(max-width: $screen-xs-max) {
+    .banner {
+      .banner-container {
+        margin-top: 55px;
+        margin-bottom: 55px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media(min-width: $screen-tablet) {
+    .banner {
+      .banner-container {
+        margin-top: 75px;
+        margin-bottom: 75px;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @media(min-width: $screen-desktop) {
+    .banner {
+
+      .banner-container {
+        margin-top: 115px;
+        margin-bottom: 115px;
+      }
+      h1 {
+        font-size: 80px;
+        font-weight: bold;
+      }
+    }
+  }
+  @media(min-width: $screen-lg-desktop) {
+    .banner {
+      .banner-container {
+        margin-top: 115px;
+        margin-bottom: 115px;
+      }
+      h1 {
+        font-size: 80px;
+        font-weight: bold;
+      }
+    }
+  }
+
 }
