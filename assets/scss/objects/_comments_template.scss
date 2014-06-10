@@ -1,0 +1,72 @@
+#respond, #comments {
+  border-top: 1px solid darken($light-gray, 5);
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.commentlist {
+  margin: 0;
+  padding: 10px 0 0 0;
+  list-style: none;
+  .children {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-left: 3px solid $light-gray;
+    list-style: none;
+    .children {
+      border-left: 2px solid lighten($light-gray, 2);
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
+  .comment {
+    margin-bottom: 30px;
+  }
+  .comment-author {
+    font-size: 12px;
+    font-style: italic;
+    cite {
+      font-weight: bold;
+    }
+    img {
+      border-radius: 50%;
+      margin-right: 5px;
+      position: relative;
+      top: 10px;
+    }
+  }
+  .comment-meta {
+    margin-top: -8px;
+    font-size: 12px;
+    padding-left: 40px;
+    font-style: italic;
+    a {
+      color: $dark-gray;
+    }
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .reply a {
+    font-size: 12px;
+    color: $black;
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 3px;
+    background: $light-gray;
+    &:active, &:visited {
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+      background: darken($light-gray, 5);
+    }
+  }
+}
+
+

@@ -3,14 +3,20 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, h2, h3, h4, h5, h6, strong, b {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-top: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  line-height: 130%; }
 
 h4 {
   font-size: 20px; }
 
 p, ul, ol, li, div, blockquote, dl {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 160%; }
 
 a {
   color: #ff2b06;
@@ -25,7 +31,8 @@ small {
   font-size: 12px; }
 
 .page-header {
-  margin-top: 0px; }
+  margin-top: 0;
+  padding-bottom: 0; }
 
 ul.inline {
   margin: 0;
@@ -41,6 +48,12 @@ ul.inline {
 
 .spacing-top {
   margin-top: 40px; }
+
+.table-cell {
+  display: table-cell; }
+
+.table {
+  display: table; }
 
 * {
   font-family: 'Open Sans', sans-serif; }
@@ -161,9 +174,9 @@ footer {
   margin-bottom: 40px;
   padding: 0 10px; }
   #sidebar ul > li.widget h4 {
-    font-size: 16px;
-    padding: 0 0 10px 10px;
-    margin: 20px -10px 10px -10px;
+    font-size: 20px;
+    margin: 0 -10px 20px -10px;
+    padding: 0 10px 10px 10px;
     border-bottom: 1px solid #e9e9e9; }
 #sidebar ul > li form.searchform label {
   display: none; }
@@ -204,12 +217,12 @@ footer {
   #sidebar ul > li.widget_calendar tbody td.pad {
     background: #fff; }
 #sidebar h2 {
-  font-size: 16px;
-  padding: 0 0 10px 10px;
-  margin: 20px -10px 10px -10px;
+  font-size: 20px;
+  margin: 0 -10px 20px -10px;
+  padding: 0 10px 10px 10px;
   border-bottom: 1px solid #e9e9e9; }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
   border: 1px solid #e9e9e9;
   background-color: #f6f6f6;
   color: #666666;
@@ -228,26 +241,167 @@ input[type="submit"] {
   cursor: pointer;
   padding: 8px 10px; }
 
+textarea {
+  max-height: 140px;
+  width: 100%; }
+
+article.post-excerpt {
+  margin: 0 0 20px 0;
+  padding: 0 0 35px 0;
+  border-bottom: 1px solid #e9e9e9; }
+  article.post-excerpt:last-child {
+    border-bottom: 0; }
+  article.post-excerpt h4 {
+    margin: 0;
+    padding: 15px 0 5px 0; }
+    article.post-excerpt h4 a {
+      color: #666666;
+      font-weight: 800; }
+      article.post-excerpt h4 a:hover {
+        color: #ff2b06; }
+  article.post-excerpt i.fa {
+    margin-right: 5px; }
+  article.post-excerpt .post-meta {
+    padding-bottom: 15px; }
+    article.post-excerpt .post-meta a {
+      color: #666666; }
+  article.post-excerpt .excerpt {
+    padding-top: 10px; }
+
+.sticky-posts article.post-excerpt {
+  margin: 0;
+  padding: 0; }
+  .sticky-posts article.post-excerpt .excerpt {
+    border-top: 1px solid #e9e9e9; }
+.sticky-posts article.post-excerpt.grouped {
+  margin: 0 0 20px 0; }
+  .sticky-posts article.post-excerpt.grouped h4 {
+    font-size: 16px; }
+  .sticky-posts article.post-excerpt.grouped .post-meta li {
+    display: block; }
+  .sticky-posts article.post-excerpt.grouped .learn-more {
+    display: none; }
+
+.post-content .feature-image {
+  margin-bottom: 20px; }
+  .post-content .feature-image img {
+    max-width: 100%;
+    height: auto; }
+.post-content .post-meta {
+  padding-bottom: 15px; }
+.post-content .user-generated-content img {
+  max-width: 100%;
+  height: auto; }
+
 .sticky-posts {
   background: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
   padding: 40px 0; }
 
-.sticky-posts h4 {
+.not-found {
+  text-align: center;
+  margin: 50px auto;
+  background: #f6f6f6;
+  height: 100px;
+  border-radius: 4px; }
+  .not-found h4 {
+    line-height: 100px; }
+    .not-found h4 i {
+      margin: 0 10px 0 0;
+      position: relative;
+      top: 10px;
+      font-size: 50px; }
+
+ul.page-numbers {
+  list-style: none;
   margin: 0;
-  padding: 15px 0 5px 0; }
-  .sticky-posts h4 a {
-    color: #666666;
-    font-weight: 800; }
-    .sticky-posts h4 a:hover {
-      color: #ff2b06; }
-.sticky-posts .post-meta {
-  padding-bottom: 15px; }
-  .sticky-posts .post-meta a {
-    color: #666666; }
-.sticky-posts .excerpt {
-  padding-top: 10px;
-  border-top: 1px solid #e9e9e9; }
+  padding: 0;
+  font-size: 12px;
+  color: #111;
+  height: 30px;
+  margin: 0 0 20px 0;
+  text-align: right; }
+  ul.page-numbers li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px; }
+    ul.page-numbers li span {
+      height: 30px;
+      padding: 0 10px;
+      line-height: 30px;
+      display: inline-block;
+      border: 1px solid #e9e9e9;
+      border-radius: 3px; }
+      ul.page-numbers li span.current {
+        font-weight: bold; }
+    ul.page-numbers li a {
+      font-size: 12px;
+      color: #111;
+      display: inline-block;
+      height: 30px;
+      padding: 0 10px;
+      line-height: 30px;
+      border-radius: 3px;
+      background: #f6f6f6; }
+      ul.page-numbers li a:hover {
+        text-decoration: none;
+        background: #e9e9e9; }
+
+#respond, #comments {
+  border-top: 1px solid #e9e9e9;
+  margin-top: 30px;
+  padding-top: 20px; }
+
+.commentlist {
+  margin: 0;
+  padding: 10px 0 0 0;
+  list-style: none; }
+  .commentlist .children {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-left: 3px solid #f6f6f6;
+    list-style: none; }
+    .commentlist .children .children {
+      border-left: 2px solid #fbfbfb;
+      margin-bottom: 0px;
+      padding-bottom: 0px; }
+  .commentlist .comment {
+    margin-bottom: 30px; }
+  .commentlist .comment-author {
+    font-size: 12px;
+    font-style: italic; }
+    .commentlist .comment-author cite {
+      font-weight: bold; }
+    .commentlist .comment-author img {
+      border-radius: 50%;
+      margin-right: 5px;
+      position: relative;
+      top: 10px; }
+  .commentlist .comment-meta {
+    margin-top: -8px;
+    font-size: 12px;
+    padding-left: 40px;
+    font-style: italic;
+    margin-bottom: 20px; }
+    .commentlist .comment-meta a {
+      color: #666666; }
+  .commentlist p {
+    font-size: 13px; }
+  .commentlist .reply a {
+    font-size: 12px;
+    color: #111;
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 3px;
+    background: #f6f6f6; }
+    .commentlist .reply a:active, .commentlist .reply a:visited {
+      color: #111; }
+    .commentlist .reply a:hover {
+      text-decoration: none;
+      background: #e9e9e9; }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

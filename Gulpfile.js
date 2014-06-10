@@ -19,14 +19,15 @@ var bowerJsDependencies = [
 ];
 var bowerCssDependencies = [
   './vendor/bootstrap/dist/css/bootstrap.css',
-  './vendor/font-awesome/css/font-awesome.css'
+  './vendor/font-awesome/css/font-awesome.css',
+  './vendor/animate.css/animate.css'
 ];
 
 
 //-- Compile SCSS -----------------------------------------------------------
 gulp.task('styles', function() {
   return gulp.src('./assets/scss/*.scss')
-    .pipe(sass({style: 'expand'}))
+    .pipe(sass({style: 'expand', errLogToConsole: true}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(rename({suffix: '.min'}))
@@ -82,6 +83,7 @@ gulp.task('fonts', function() {
   return gulp.src('./vendor/font-awesome/fonts/**/*.*')
     .pipe(gulp.dest('./dist/fonts'));
 });
+
 
 //-- Clean task to run before deploys ---------------------------------------
 gulp.task('clean', function() {

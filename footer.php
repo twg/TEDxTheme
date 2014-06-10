@@ -1,7 +1,7 @@
 <?php
   $template_url = get_template_directory_uri();
 ?>
-<div class="black-bg">
+<div class="black-bg spacing-top">
   <div class="container">
     <footer>
       <div class="row">
