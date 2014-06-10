@@ -1,4 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+h4 {
+  font-size: 20px; }
+
+p, ul, ol, li, div, blockquote, dl {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px; }
+
+a {
+  color: #ff2b06;
+  text-decoration: none; }
+  a:hover {
+    color: #ff5339;
+    text-decoration: underline; }
+  a:visited, a:active {
+    color: #ff2b06; }
+
+small {
+  font-size: 12px; }
+
+ul.inline {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.inline li {
+    margin: 0 15px 0 0;
+    padding: 0;
+    display: inline; }
+
+.uppercase {
+  text-transform: uppercase; }
+
 * {
   font-family: 'Open Sans', sans-serif; }
 
@@ -105,6 +142,27 @@ footer {
     background-position: left -130px; }
   footer .web-partners span, footer .web-partners img {
     vertical-align: middle; }
+
+.sticky-posts {
+  background: #f6f6f6;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 40px 0; }
+
+.sticky-posts h4 {
+  margin: 0;
+  padding: 15px 0 5px 0; }
+  .sticky-posts h4 a {
+    color: #666666;
+    font-weight: 800; }
+    .sticky-posts h4 a:hover {
+      color: #ff2b06; }
+.sticky-posts .post-meta {
+  padding-bottom: 15px; }
+  .sticky-posts .post-meta a {
+    color: #666666; }
+.sticky-posts .excerpt {
+  padding-top: 10px;
+  border-top: 1px solid #e9e9e9; }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

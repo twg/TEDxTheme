@@ -2,7 +2,10 @@
 
 //-- Initializers -----------------------------------------------------------
 
+@import "initializers/colors";
+@import "initializers/typography";
 @import "initializers/bootstrap_override";
+@import "initializers/modifiers";
 
 
 //-- Pages ------------------------------------------------------------------
@@ -10,10 +13,17 @@
 @import "pages/layout";
 @import "pages/template_home";
 
+
 //-- Singletons -------------------------------------------------------------
 
 @import "objects/singletons/header";
 @import "objects/singletons/footer";
+
+
+//-- Objects ----------------------------------------------------------------
+
+@import "objects/sticky-posts";
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
