@@ -1,18 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 //-- Initializers -----------------------------------------------------------
-
 @import "initializers/colors";
 @import "initializers/typography";
 @import "initializers/bootstrap_override";
 @import "initializers/modifiers";
-
+@import "initializers/icons";
 
 //-- Pages ------------------------------------------------------------------
 
 @import "pages/layout";
 @import "pages/template_home";
-
+@import "pages/template_general";
 
 //-- Singletons -------------------------------------------------------------
 
@@ -20,12 +18,11 @@
 @import "objects/singletons/footer";
 @import "objects/singletons/sidebar";
 
-
 //-- Objects ----------------------------------------------------------------
 
 @import "objects/forms";
 @import "objects/sticky-posts";
-
+@import "objects/team_tile";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -38,6 +35,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
+
 
 
 

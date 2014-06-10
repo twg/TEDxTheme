@@ -1,0 +1,84 @@
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+  br {
+    display: none;
+  }
+}
+
+.ico {
+  position: relative;
+}
+
+.ico-box {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.ico:before {
+  background: transparent url('/wp-content/themes/tedx/images/small-sprite-ico.png') no-repeat left top;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -11px;
+  content: "";
+}
+
+.ico-right:before {
+  left: auto;
+  right: 10px;
+  top: 10px;
+}
+
+h2.ico {
+  padding-left: 26px;
+}
+
+h2.ico:before {
+  height: 36px;
+  width: 36px;
+  margin-top: -20px;
+}
+
+.ico-subscribe:before {
+  background-position: left -180px;
+}
+
+.ico-facebook:before {
+  background-position: left -260px;
+}
+
+.ico-twitter:before {
+  background-position: left -220px;
+}
+
+.ico-stream:before {
+  background-position: left -565px;
+}
+
+.ico-box {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: block;
+  &:hover {
+    background-color: #c61e1e;
+  }
+  &:before {
+    left: 10px;
+    width: 35px;
+  }
+}

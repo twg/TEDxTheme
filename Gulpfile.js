@@ -22,7 +22,6 @@ var bowerCssDependencies = [
   './vendor/font-awesome/css/font-awesome.css'
 ];
 
-
 //-- Compile SCSS -----------------------------------------------------------
 gulp.task('styles', function() {
   return gulp.src('./assets/scss/*.scss')

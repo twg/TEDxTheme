@@ -12,6 +12,10 @@
 
   <link href="//www.google-analytics.com" rel="dns-prefetch">
 
+  <!-- JQuery -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
   <!-- Favicons -->
   <link href="<?php echo $template_url; ?>/assets/img/favicons/favicon.ico" rel="shortcut icon">
   <link href="<?php echo $template_url; ?>/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
