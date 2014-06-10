@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 //-- Initializers -----------------------------------------------------------
-
+@import "initializers/colors";
+@import "initializers/typography";
 @import "initializers/bootstrap_override";
-
+@import "initializers/modifiers";
+@import "initializers/icons";
 
 //-- Pages ------------------------------------------------------------------
 
@@ -15,7 +16,11 @@
 
 @import "objects/singletons/header";
 @import "objects/singletons/footer";
-@import "objects/singletons/team_tile";
+
+//-- Objects ----------------------------------------------------------------
+
+@import "objects/sticky-posts";
+@import "objects/team_tile";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -15,6 +15,12 @@ class TeamPostType {
     add_action('save_post', array($this, 'save_custom_fields'));
 
     add_shortcode('team_members', array($this, 'team_members_shortcode'));
+
+
+    add_image_size('team', 370, 370, true);
+
+    add_image_size('team_thumb', 100, 57, true);
+
   }
 
   function add_post_type() {
@@ -32,7 +38,7 @@ class TeamPostType {
       'not_found' => __('No Team Members Found')
     );
     // Settings
-    $speaker_settings = array(
+    $team_settings = array(
       'labels' => $labels,
       'public' => true,
       'publicly_queryable' => true,
@@ -49,7 +55,7 @@ class TeamPostType {
       'register_meta_box_cb' => array($this, 'add_meta_boxes')
     );
     // Register the actual type
-    register_post_type('team_member', $speaker_settings);
+    register_post_type('team_member', $team_settings);
   }
 
   function custom_title_text($title) {
@@ -105,7 +111,7 @@ class TeamPostType {
         if (has_post_thumbnail()) {
           the_post_thumbnail('thumb');
         } else {
-          echo "<img src='" . get_bloginfo('template_url') . "/images/defaults/speaker-thumb.jpg' width='139' height='150' />";
+          echo "<img src='" . get_bloginfo('template_url') . "/images/defaults/team-thumb.jpg' width='139' height='150' />";
         }
         echo "</a>";
         break;
