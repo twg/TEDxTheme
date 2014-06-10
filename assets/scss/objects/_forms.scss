@@ -1,0 +1,20 @@
+input[type="text"], input[type="password"] {
+  border: 1px solid darken($light-gray, 5);
+  background-color: $light-gray;
+  color: $dark-gray;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: $red;
+  border-radius: 3px;
+  border: 0;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 8px 10px;
+}
