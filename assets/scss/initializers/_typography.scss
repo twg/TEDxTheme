@@ -1,0 +1,55 @@
+$fontBody: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontHeader: "HelveticaNeue-Bold", "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+body {
+  font-family: $fontBody;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: $fontHeader;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p, ul, ol, li, div, blockquote, dl {
+  font-family: $fontBody;
+  font-size: 16px;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+  &:hover {
+    color: lighten($red, 10);
+    text-decoration: underline;
+  }
+  &:visited, &:active {
+    color: $red;
+  }
+}
+
+small {
+  font-size: 12px;
+}
