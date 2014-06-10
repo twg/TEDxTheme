@@ -18,7 +18,8 @@ var bowerJsDependencies = [
   './vendor/bootstrap/dist/js/bootstrap.js'
 ];
 var bowerCssDependencies = [
-  './vendor/bootstrap/dist/css/bootstrap.css'
+  './vendor/bootstrap/dist/css/bootstrap.css',
+  './vendor/font-awesome/css/font-awesome.css'
 ];
 
 //-- Compile SCSS -----------------------------------------------------------
@@ -75,6 +76,12 @@ gulp.task('images', function() {
 });
 
 
+//-- Copy Fonts to the Dist Directory ---------------------------------------
+gulp.task('fonts', function() {
+  return gulp.src('./vendor/font-awesome/fonts/**/*.*')
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
 //-- Clean task to run before deploys ---------------------------------------
 gulp.task('clean', function() {
   return gulp.src(['./dist/assets/css', './dist/assets/js'], {read: false})
@@ -84,7 +91,7 @@ gulp.task('clean', function() {
 
 //-- Default Task -----------------------------------------------------------
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images');
+  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts');
 });
 
 

@@ -21,16 +21,11 @@ a {
   a:visited, a:active {
     color: #ff2b06; }
 
-a.btn {
-  color: #f6f6f6; }
-  a.btn:visited, a.btn:active {
-    color: #f6f6f6; }
-
 small {
   font-size: 12px; }
 
 .page-header {
-  border-bottom: 1px solid #999; }
+  margin-top: 0px; }
 
 ul.inline {
   margin: 0;
@@ -44,76 +39,8 @@ ul.inline {
 .uppercase {
   text-transform: uppercase; }
 
-/* For image replacement */
-.ir {
-  display: block;
-  border: 0;
-  text-indent: -999em;
-  overflow: hidden;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
-  *line-height: 0; }
-  .ir br {
-    display: none; }
-
-.ico {
-  position: relative; }
-
-.ico-box {
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  display: block; }
-
-.ico:before {
-  background: transparent url('/wp-content/themes/tedx/images/small-sprite-ico.png') no-repeat left top;
-  width: 20px;
-  height: 20px;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -11px;
-  content: ""; }
-
-/*================ Right-aligned icons ================*/
-.ico-right:before {
-  left: auto;
-  right: 10px;
-  top: 10px; }
-
-h2.ico {
-  padding-left: 26px; }
-
-h2.ico:before {
-  height: 36px;
-  width: 36px;
-  margin-top: -20px; }
-
-.ico-subscribe:before {
-  background-position: left -180px; }
-
-.ico-facebook:before {
-  background-position: left -260px; }
-
-.ico-twitter:before {
-  background-position: left -220px; }
-
-.ico-stream:before {
-  background-position: left -565px; }
-
-.ico-box {
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  display: block; }
-  .ico-box:hover {
-    background-color: #c61e1e; }
-  .ico-box:before {
-    left: 10px;
-    width: 35px; }
+.spacing-top {
+  margin-top: 40px; }
 
 * {
   font-family: 'Open Sans', sans-serif; }
@@ -141,7 +68,7 @@ body {
 
 .contents {
   padding-top: 10px;
-  padding-bottom: 50px; }
+  padding-bottom: 10px; }
 
 body.page-template-page_templatestemplate_home-php .banner {
   color: #FFF;
@@ -153,49 +80,12 @@ body.page-template-page_templatestemplate_home-php .banner {
     width: 75%;
     background-color: rgba(100, 100, 100, 0.65);
     padding: 20px;
-    margin: auto; }
-@media (max-width: 767px) {
-  body.page-template-page_templatestemplate_home-php .banner .banner-container {
-    margin-top: 55px;
-    margin-bottom: 55px; }
-  body.page-template-page_templatestemplate_home-php .banner h1 {
-    font-size: 20px; }
-  body.page-template-page_templatestemplate_home-php .banner h2 {
-    font-size: 16px; } }
-@media (min-width: 768px) {
-  body.page-template-page_templatestemplate_home-php .banner .banner-container {
-    margin-top: 75px;
-    margin-bottom: 75px; }
-  body.page-template-page_templatestemplate_home-php .banner h1 {
-    font-size: 40px; }
-  body.page-template-page_templatestemplate_home-php .banner h2 {
-    font-size: 26px; } }
-@media (min-width: 992px) {
-  body.page-template-page_templatestemplate_home-php .banner .banner-container {
+    margin: auto;
     margin-top: 115px;
     margin-bottom: 115px; }
   body.page-template-page_templatestemplate_home-php .banner h1 {
     font-size: 80px;
-    font-weight: bold; } }
-@media (min-width: 1200px) {
-  body.page-template-page_templatestemplate_home-php .banner .banner-container {
-    margin-top: 115px;
-    margin-bottom: 115px; }
-  body.page-template-page_templatestemplate_home-php .banner h1 {
-    font-size: 80px;
-    font-weight: bold; } }
-
-body.page-template-page_templatestemplate_general-php h1.minor {
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 0 10px;
-  line-height: 1.4; }
-body.page-template-page_templatestemplate_general-php section header {
-  border-bottom: solid 1px #e5e5e5;
-  padding-bottom: 5px;
-  margin-bottom: 20px; }
-body.page-template-page_templatestemplate_general-php .partner-tile img, body.page-template-page_templatestemplate_general-php .team-tile img {
-  width: 100%; }
+    font-weight: bold; }
 
 header {
   padding-top: 30px;
@@ -218,8 +108,6 @@ header {
       color: #ffffff; }
 
 footer {
-  -webkit-box-shadow: 0px 500px 0px 500px #181818;
-  box-shadow: 0px 500px 0px 500px #181818;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 11px;
@@ -261,6 +149,85 @@ footer {
   footer .web-partners span, footer .web-partners img {
     vertical-align: middle; }
 
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  #sidebar ul > li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; }
+#sidebar ul > li.widget {
+  margin-bottom: 40px;
+  padding: 0 10px; }
+  #sidebar ul > li.widget h4 {
+    font-size: 16px;
+    padding: 0 0 10px 10px;
+    margin: 20px -10px 10px -10px;
+    border-bottom: 1px solid #e9e9e9; }
+#sidebar ul > li form.searchform label {
+  display: none; }
+#sidebar ul > li form.searchform input[type="text"] {
+  width: 70%; }
+#sidebar ul > li form.searchform input[type="submit"] {
+  width: 28%;
+  max-width: 90px; }
+#sidebar ul > li.widget_categories ul {
+  list-style: decimal;
+  padding-left: 10px; }
+  #sidebar ul > li.widget_categories ul li {
+    margin-bottom: 10px;
+    font-size: 12px; }
+    #sidebar ul > li.widget_categories ul li a {
+      font-size: 14px; }
+#sidebar ul > li.widget_calendar table {
+  width: 100%;
+  font-size: 12px; }
+#sidebar ul > li.widget_calendar caption {
+  text-align: right;
+  font-weight: bold;
+  padding: 10px 10px 10px 0px;
+  color: #dddddd; }
+#sidebar ul > li.widget_calendar thead th {
+  text-align: center;
+  padding: 5px; }
+#sidebar ul > li.widget_calendar tbody td {
+  background: #f6f6f6;
+  border: 1px solid #fff;
+  margin: 0 2px 2px 0;
+  text-align: center;
+  padding: 10px; }
+  #sidebar ul > li.widget_calendar tbody td a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  #sidebar ul > li.widget_calendar tbody td.pad {
+    background: #fff; }
+#sidebar h2 {
+  font-size: 16px;
+  padding: 0 0 10px 10px;
+  margin: 20px -10px 10px -10px;
+  border-bottom: 1px solid #e9e9e9; }
+
+input[type="text"], input[type="password"] {
+  border: 1px solid #e9e9e9;
+  background-color: #f6f6f6;
+  color: #666666;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 3px; }
+
+input[type="submit"] {
+  background-color: #ff2b06;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 8px 10px; }
+
 .sticky-posts {
   background: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
@@ -281,59 +248,6 @@ footer {
 .sticky-posts .excerpt {
   padding-top: 10px;
   border-top: 1px solid #e9e9e9; }
-
-.team-tile {
-  margin-bottom: 25px;
-  overflow: hidden; }
-  .team-tile .team-photo {
-    position: relative;
-    max-width: 100%;
-    top: 0; }
-  .team-tile .details-open .team-photo {
-    top: -40px; }
-  .team-tile .team-info {
-    font-size: 14px;
-    background: #ff2b06;
-    color: #fff; }
-    .team-tile .team-info a, .team-tile .team-info h2, .team-tile .team-info .team-role {
-      color: #fff; }
-    .team-tile .team-info .team-details-container {
-      padding: 15px;
-      height: 150px;
-      width: 100%;
-      overflow: auto;
-      font-size: 13px; }
-  .team-tile .team-links .ico {
-    height: 35px;
-    width: 35px;
-    border-top: solid 1px #ff2b06;
-    border-color: rgba(0, 0, 0, 0.1); }
-    .team-tile .team-links .ico a {
-      display: block;
-      height: 100%;
-      z-index: 100;
-      position: relative; }
-  .team-tile .team-links .tweet {
-    border-bottom: none; }
-    .team-tile .team-links .tweet:before {
-      background-position: -30px -385px;
-      z-index: 10; }
-  .team-tile .team-title {
-    padding: 15px 20px;
-    margin-right: 35px;
-    border-right: solid 1px #ff2b06;
-    border-color: rgba(0, 0, 0, 0.1);
-    line-height: 1; }
-    .team-tile .team-title .team-role {
-      font-size: 16px; }
-      .team-tile .team-title .team-role p {
-        margin: 0; }
-    .team-tile .team-title h2 {
-      font-size: 16px;
-      margin-top: 0px;
-      margin-bottom: 3px;
-      font-weight: bold;
-      line-height: 19px; }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

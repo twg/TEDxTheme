@@ -1,0 +1,98 @@
+#sidebar {
+
+  @mixin sidebar-header {
+    font-size: 16px;
+    padding: 0 0 10px 10px;
+    margin: 20px -10px 10px -10px;
+    border-bottom: 1px solid darken($light-gray, 5);
+  }
+
+  //-- Reset ----------------------------------------------------------------
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+
+  //-- Base Widget ----------------------------------------------------------
+  ul > li.widget {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    h4 {
+      @include sidebar-header;
+    }
+  }
+
+  //-- Search Widget --------------------------------------------------------
+  ul > li form.searchform {
+    label {
+      display: none;
+    }
+    input[type="text"] {
+      width: 70%;
+    }
+    input[type="submit"] {
+      width: 28%;
+      max-width: 90px;
+    }
+  }
+
+  //-- Categories Widget ----------------------------------------------------
+  ul > li.widget_categories {
+    ul {
+      list-style: decimal;
+      padding-left: 10px;
+      li {
+        margin-bottom: 10px;
+        font-size: 12px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  //-- Calendar Widget ------------------------------------------------------
+  ul > li.widget_calendar {
+    table {
+      width: 100%;
+      font-size: 12px;
+    }
+    caption {
+      text-align: right;
+      font-weight: bold;
+      padding: 10px 10px 10px 0px;
+      color: darken($light-gray, 10);
+    }
+    thead th {
+      text-align: center;
+      padding: 5px;
+    }
+    tbody td {
+      background: $light-gray;
+      border: 1px solid $white;
+      margin: 0 2px 2px 0;
+      text-align: center;
+      padding: 10px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &.pad {
+        background: $white;
+      }
+    }
+  }
+
+  //-- Default Sidebar Override (no widgets) --------------------------------
+  h2 {
+    @include sidebar-header;
+  }
+
+}
