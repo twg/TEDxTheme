@@ -5,6 +5,14 @@ article.post-excerpt {
   &:last-child {
     border-bottom: 0;
   }
+
+  .post-thumbnail {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   h4 {
     margin: 0;
     padding: 15px 0 5px 0;

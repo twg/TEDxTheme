@@ -1,20 +1,38 @@
-<?php get_header(); ?>
+<?php 
+get_header();
+$query = new TEDxQuery();
+$sticky_posts = $query->sticky_posts(5);
+$unsticky_posts = $query->unsticky_posts();
+?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<div class="container spacing-top">
+  <div class="row">
 
-			<h1><?php _e( 'Latest Posts', 'tedx' ); ?></h1>
+    <div class="col-md-9">
 
-			<?php get_template_part('loop'); ?>
+      <div class="page-header">
+        <h4>Blog Posts</h4>
+      </div><!-- .page-header -->
 
-			<?php get_template_part('pagination'); ?>
+      <?php
+        if(count($unsticky_posts) > 0):
+          foreach ($unsticky_posts as $index => $post):
+            WP_Render::partial('partials/blog/_post_excerpt.php');
+          endforeach;
+        else:
+          WP_Render::partial('partials/_not_found.php', ['message' => 'There does not appear to be any posts here...']);
+        endif;
+      ?>
 
-		</section>
-		<!-- /section -->
-	</main>
+      <?php WP_Render::partial('partials/_pagination.php', ['offset' => count($sticky_posts)]); ?>
 
-<?php get_sidebar(); ?>
+    </div><!-- .col-md-8 -->
+
+    <div class="col-md-3">
+      <?php get_sidebar(); ?>
+    </div><!-- .col-md-4 -->
+
+  </div><!-- .row -->
+</div><!-- .container -->
 
 <?php get_footer(); ?>
-

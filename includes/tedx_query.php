@@ -26,5 +26,13 @@ class TEDxQuery {
     return $q->posts;
   }
 
+  function current_page() {
+    $current_page = 1;
+    if(get_query_var('paged') && get_query_var('paged') !== 1) {
+      $current_page = get_query_var('paged');
+    }
+    return $current_page;
+  }
+
 }
 

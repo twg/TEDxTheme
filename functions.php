@@ -1,7 +1,8 @@
 <?php
 
 //-- Theme Setup ------------------------------------------------------------
-require_once 'includes/theme-setup.php';
+require_once 'includes/theme_setup.php';
+require_once 'includes/theme/image_settings.php';
 
 //-- Utilities --------------------------------------------------------------
 require_once 'includes/renderer.php';
