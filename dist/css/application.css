@@ -358,6 +358,9 @@ article.post-excerpt {
   border-bottom: 1px solid #e9e9e9; }
   article.post-excerpt:last-child {
     border-bottom: 0; }
+  article.post-excerpt .post-thumbnail img {
+    max-width: 100%;
+    height: auto; }
   article.post-excerpt h4 {
     margin: 0;
     padding: 15px 0 5px 0; }
