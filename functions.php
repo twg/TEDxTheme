@@ -1,5 +1,6 @@
 <?php
-require_once 'includes/controls/wp_customize_textarea_control.php';
+require_once 'includes/controls/textarea_custom_control.php';
+require_once 'includes/controls/tags_dropdown_custom_control.php';
 
 //-- Theme Setup ------------------------------------------------------------
 require_once 'includes/theme_setup.php';
