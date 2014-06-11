@@ -1,9 +1,5 @@
 <?php
 
-//-- Navbars Settings -------------------------------------------------------
-register_nav_menu('header', 'Main Header Menu');
-
-
 //-- Sidebar Settings -------------------------------------------------------
 $sidebar_settings = [
   'class'        => 'sidebar',
