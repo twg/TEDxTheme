@@ -172,27 +172,35 @@ class SpeakerPostType {
   }
 
   function render_video_meta_boxes() {
-    $renderer = new Renderer();
-    $renderer->data['speaker_video_id'] = get_post_meta(get_the_ID(), '_speaker_video_id', true);
-    echo $renderer->render('admin/custom_post_types/speaker/video_id');
+    WP_Render::partial(
+      'partials/admin/speaker/_video_id.php',
+      [
+        'speaker_video_id' => get_post_meta(get_the_ID(), '_speaker_video_id', true)
+      ]);
   }
 
   function render_speaker_twitter_meta_boxes() {
-    $renderer = new Renderer();
-    $renderer->data['speaker_twitter_link'] = get_post_meta(get_the_ID(), '_speaker_twitter_link', true);
-    echo $renderer->render('admin/custom_post_types/speaker/twitter_link');
+    WP_Render::partial(
+      'partials/admin/speaker/_twitter_link.php',
+      [
+        'speaker_twitter_link' => get_post_meta(get_the_ID(), '_speaker_twitter_link', true)
+      ]);
   }
 
   function render_website_meta_boxes() {
-    $renderer = new Renderer();
-    $renderer->data['speaker_website_url'] = get_post_meta(get_the_ID(), '_speaker_website_url', true);
-    echo $renderer->render('admin/custom_post_types/speaker/website_url');
+    WP_Render::partial(
+      'partials/admin/speaker/_website_url.php',
+      [
+        'speaker_website_url' => get_post_meta(get_the_ID(), '_speaker_website_url', true)
+      ]);
   }
 
   function render_video_description_boxes() {
-    $renderer = new Renderer();
-    $renderer->data['speaker_video_description'] = get_post_meta(get_the_ID(), '_speaker_video_description', true);
-    echo $renderer->render('admin/custom_post_types/speaker/video_description');
+    WP_Render::partial(
+      'partials/admin/speaker/_video_description.php',
+      [
+        'speaker_website_url' => get_post_meta(get_the_ID(), '_speaker_video_description', true)
+      ]);
   }
 
   function new_excerpt_length() {

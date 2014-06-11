@@ -8,7 +8,7 @@
 </script>
 
 <?php
-wp_editor($this->data['speaker_video_description'], 'speaker_video_description_mce', array(
+wp_editor($speaker_video_description, 'speaker_video_description_mce', array(
   'media_buttons' => false,
   'textarea_name' => '_speaker_video_description',
   'textarea_rows' => 3,
