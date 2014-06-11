@@ -26,7 +26,7 @@ $unsticky_posts = $query->unsticky_posts();
 <div class="container spacing-top">
   <div class="row">
 
-    <div class="col-md-8">
+    <div class="col-md-9">
 
       <div class="page-header">
         <h4>Recent</h4>
@@ -41,9 +41,12 @@ $unsticky_posts = $query->unsticky_posts();
           WP_Render::partial('partials/_not_found.php', ['message' => 'There does not appear to be any posts here...']);
         endif;
       ?>
+
+      <?php WP_Render::partial('partials/_pagination.php', ['offset' => count($sticky_posts)]); ?>
+
     </div><!-- .col-md-8 -->
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <?php get_sidebar(); ?>
     </div><!-- .col-md-4 -->
 

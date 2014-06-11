@@ -1,6 +1,6 @@
 <?php $first_post = array_shift($sticky_posts); ?>
 
-<div class="col-md-6">
+<div class="col-md-6 col-sm-12">
   <?php 
     global $post; 
     $post = $first_post;
@@ -9,7 +9,7 @@
   <?php WP_Render::partial('partials/blog/_post_excerpt.php', ['post' => $post]); ?>
 </div><!-- .col-md-6 -->
 
-<div class="col-md-6">
+<div class="col-md-6 col-sm-12">
   <div class="row">
 
     <?php foreach($sticky_posts as $sticky_post): ?>
@@ -20,7 +20,7 @@
       setup_postdata($post);php
       ?>
       <div class="col-md-6">
-        <?php WP_Render::partial('partials/blog/_post_excerpt.php', ['post' => $post, 'hide_excerpt' => true]); ?>
+        <?php WP_Render::partial('partials/blog/_post_excerpt.php', ['post' => $post, 'hide_excerpt' => true, 'append_class' => 'grouped equal-height']); ?>
       </div><!-- .col-md-6 -->
     <?php endforeach; ?>
 

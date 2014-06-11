@@ -1,0 +1,16 @@
+.not-found {
+  text-align: center;
+  margin: 50px auto;
+  background: $light-gray;
+  height: 100px;
+  border-radius: 4px;
+  h4 {
+    line-height: 100px;
+    i {
+      margin: 0 10px 0 0;
+      position: relative;
+      top: 10px;
+      font-size: 50px;
+    }
+  }
+}

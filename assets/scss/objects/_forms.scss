@@ -1,4 +1,4 @@
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
   border: 1px solid darken($light-gray, 5);
   background-color: $light-gray;
   color: $dark-gray;
@@ -17,4 +17,9 @@ input[type="submit"] {
   font-size: 12px;
   cursor: pointer;
   padding: 8px 10px;
+}
+
+textarea {
+  max-height: 140px;
+  width: 100%;
 }

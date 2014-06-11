@@ -1,0 +1,55 @@
+article.post-excerpt {
+  margin: 0 0 20px 0;
+  padding: 0 0 35px 0;
+  border-bottom: 1px solid darken($light-gray, 5);
+  &:last-child {
+    border-bottom: 0;
+  }
+  h4 {
+    margin: 0;
+    padding: 15px 0 5px 0;
+    a {
+      color: $dark-gray;
+      font-weight: 800;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  i.fa {
+    margin-right: 5px;
+  }
+  .post-meta  {
+    padding-bottom: 15px;
+    a {
+      color: $dark-gray;
+    }
+  }
+  .excerpt {
+    padding-top: 10px;
+  }
+}
+
+
+//-- Modifications for Sticky Posts -----------------------------------------
+.sticky-posts {
+  article.post-excerpt {
+    margin: 0;
+    padding: 0;
+    .excerpt {
+      border-top: 1px solid darken($light-gray, 5);
+    } 
+  }
+  article.post-excerpt.grouped {
+    margin: 0 0 20px 0;
+    h4 {
+      font-size: 16px;
+    }
+    .post-meta li {
+      display: block;
+    }
+    .learn-more {
+      display: none;
+    }
+  }
+}
