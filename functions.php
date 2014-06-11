@@ -4,6 +4,8 @@ require_once 'includes/controls/wp_customize_textarea_control.php';
 //-- Theme Setup ------------------------------------------------------------
 require_once 'includes/theme_setup.php';
 require_once 'includes/theme/image_settings.php';
+require_once 'includes/theme/selective_menu_walker.php';
+require_once 'includes/theme/menus.php';
 
 //-- Utilities --------------------------------------------------------------
 require_once 'includes/renderer.php';
