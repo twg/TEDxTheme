@@ -20,7 +20,7 @@
       setup_postdata($post);php
       ?>
       <div class="col-md-6">
-        <?php WP_Render::partial('partials/blog/_post_excerpt.php', ['post' => $post, 'hide_excerpt' => true, 'append_class' => 'grouped equal-height']); ?>
+        <?php WP_Render::partial('partials/blog/_post_excerpt.php', ['post' => $post, 'hide_excerpt' => true, 'hide_comment' => true, 'append_class' => 'grouped']); ?>
       </div><!-- .col-md-6 -->
     <?php endforeach; ?>
 

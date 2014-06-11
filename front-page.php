@@ -5,7 +5,7 @@ $sticky_posts = $query->sticky_posts(5);
 $unsticky_posts = $query->unsticky_posts();
 ?>
 
-<?php if(count($sticky_posts) > 0): ?>
+<?php if(count($sticky_posts) > 0 && $query->current_page() === 1): ?>
 <div class="sticky-posts">
   <div class="container">
     <div class="row">
@@ -34,7 +34,9 @@ $unsticky_posts = $query->unsticky_posts();
 
       <?php
         if(count($unsticky_posts) > 0):
+          global $post;
           foreach ($unsticky_posts as $index => $post):
+            setup_postdata($post);
             WP_Render::partial('partials/blog/_post_excerpt.php');
           endforeach;
         else:
