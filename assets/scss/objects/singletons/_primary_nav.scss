@@ -1,0 +1,63 @@
+//-- Basic Reset ----------------------------------------------------------
+nav.primary-nav, nav.primary-nav-secondary {
+  ul, ul li {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+  }
+  li a {
+    color: lighten($dark-gray, 20);
+    font-size: 16px;
+    margin-right: 20px;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+//-- Main Navigation --------------------------------------------------------
+nav.primary-nav {
+  padding: 20px 0 0 0;
+  ul li {
+    display: inline;
+  }
+  li.current-menu-item a, li.current_page_ancestor a {
+    color: $white;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+    border-bottom: 4px solid $red;
+  }
+}
+
+//-- Secondary Navigation ---------------------------------------------------
+.primary-nav-secondary-container {
+  border-bottom: 1px solid darken($light-gray, 5);
+}
+
+nav.primary-nav-secondary {
+  li {
+    display: inline-block;
+  }
+  ul {
+    display: inline-block;
+  }
+  ul.menu > li {
+    padding: 20px 0;
+  }
+  ul{
+    a {
+      &:hover {
+        color: $black;
+      }
+    }
+    li.current-menu-item > a {
+      font-weight: bold;
+      color: $black;
+      padding: 5px 0 5px 0;
+      border-bottom: 4px solid darken($light-gray, 5);
+    }
+  }
+}

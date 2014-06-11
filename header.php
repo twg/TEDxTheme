@@ -1,4 +1,5 @@
 <?php
+  global $TEDxMenus;
   $template_url = get_template_directory_uri();
 ?>
 <!doctype html>
@@ -36,6 +37,7 @@
 <div class="black-bg">
   <div class="container">
     <header>
+
       <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <?php
@@ -60,7 +62,24 @@
             <span class="copy pull-right clear"><?php echo ot_get_option('header_callout') ?></span>
           </div>
         </div>
-      </div>
+      </div><!-- .row -->
+
+      <nav class="primary-nav">
+        <?= $TEDxMenus->primary_nav(); ?>
+      </nav>
+
     </header>
+
   </div>
-</div>
+</div><!-- .black-bg -->
+
+
+<?php if($TEDxMenus->show_secondary_nav()): ?>
+  <div class="primary-nav-secondary-container">
+    <div class="container ">
+      <nav class="primary-nav-secondary">
+        <?= $TEDxMenus->secondary_nav(); ?>
+      </nav>
+    </div>
+  </div>
+<?php endif; ?>
