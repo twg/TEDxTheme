@@ -148,9 +148,11 @@ class PartnerPostType {
   }
 
   function render_partner_url_meta_boxes() {
-    $renderer = new Renderer();
-    $renderer->data['partner_url'] = get_post_meta(get_the_ID(), '_partner_url', true);
-    echo $renderer->render('admin/custom_post_types/partner/partner_url');
+    WP_Render::partial(
+      'partials/admin/partner/_partner_url.php',
+      [
+        'partner_url' => get_post_meta(get_the_ID(), '_partner_url', true)
+      ]);
   }
 
   function get_partners() {
