@@ -1,5 +1,5 @@
 <?php
-  $template_url = get_template_directory_uri();
+$template_url = get_template_directory_uri();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -38,26 +38,19 @@
     <header>
       <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <?php
-          $logo = ot_get_option('logo', 'http://placehold.it/229x50.png');
-          if(is_array($logo) && array_key_exists('background-image', $logo)):
-            $logo_url = $logo['background-image'];
-          else:
-            $logo_url = $logo;
-          endif;
-          ?>
-          <a href="<?php echo ot_get_option('logo_link'); ?>">
-            <img src="<?php echo $logo_url; ?>" height="50" width="229" alt="Logo" class="pull-left">
+          <a href="<?php echo get_theme_mod('logo_link', '/'); ?>">
+            <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = 'http://placehold.it/229x50.png' ?>
+            <img src="<?php echo $logo ?>" height="50" width="229" alt="Logo" class="pull-left">
           </a>
           <div class="header-date-location pull-left">
-            <time class="date" datetime="2014-10-02"><?php echo ot_get_option('event_date') ?></time>
-            <span class="location"><?php echo ot_get_option('event_location') ?></span>
+            <time class="date" datetime="2014-10-02"><?php echo get_theme_mod('event_date', 'Event Date') ?></time>
+            <span class="location"><?php echo get_theme_mod('event_location', 'Event Location') ?></span>
           </div>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <div class="call-to-action">
-            <a href="<?php echo ot_get_option('callout_link'); ?>" class="btn btn-danger pull-right"><?php echo ot_get_option('button_callout_text') ?></a>
-            <span class="copy pull-right clear"><?php echo ot_get_option('header_callout') ?></span>
+            <a href="<?php echo get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-danger pull-right"><?php echo get_theme_mod('button_callout_text', 'CTA') ?></a>
+            <span class="copy pull-right clear"><?php echo get_theme_mod('header_callout', 'Header Callout') ?></span>
           </div>
         </div>
       </div>
