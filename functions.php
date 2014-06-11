@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/controls/wp_customize_textarea_control.php';
 
 //-- Theme Setup ------------------------------------------------------------
 require_once 'includes/theme_setup.php';
@@ -14,7 +15,6 @@ require_once 'includes/advanced_custom_fields/template_home.php';
 
 //-- Admin Inclues ----------------------------------------------------------
 require_once 'includes/admin/plugin_dependencies.php';
-require_once 'includes/admin/option_tree.php';
 
 //-- Theme Query Helpers ----------------------------------------------------
 require_once 'includes/tedx_query.php';

@@ -2,7 +2,6 @@
 class PluginDependencies {
 
   var $dependencies = [
-    'option-tree/ot-loader.php'      => 'You must install and activate the <a href="https://wordpress.org/plugins/option-tree/" target="_blank">Option Tree</a> plugin',
     'advanced-custom-fields/acf.php' => 'You must install and activate the <a href="http://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a> Plugin'
   ];
 

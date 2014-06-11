@@ -1,7 +1,7 @@
 <?php
 /*
 *   Used to selectivly output only child items of the current nav.
-*   Taken From: http://wordpress.stackexchange.com/questions/2802/display-a-portion-branch-of-the-menu-tree-using-wp-nav-menu
+*   Taken directly from: http://wordpress.stackexchange.com/questions/2802/display-a-portion-branch-of-the-menu-tree-using-wp-nav-menu
 */
 class Selective_Walker extends Walker_Nav_Menu
 {
