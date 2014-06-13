@@ -26,4 +26,9 @@ header {
     }
   }
 
+  //-- Responsive Tweaks ----------------------------------------------------
+  @include respond-to(tablet-portrait) {
+    padding-top: 0
+  }
+
 }

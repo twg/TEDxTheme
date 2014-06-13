@@ -32,3 +32,6 @@ function TeamTile(el) {
 
   this.init();
 }
+
+//-- Migrating to Angular ---------------------------------------------------
+angular.module('TEDxTheme', []);
