@@ -619,7 +619,6 @@ ul.page-numbers {
     background-color: #000;
     background-position: top center;
     background-repeat: no-repeat;
-    color: #888888;
     display: block;
     position: relative;
     text-align: center; }
@@ -663,7 +662,6 @@ ul.page-numbers {
         .speaker-tile .speaker-tile-container .speaker-description .speaker-info h2 {
           font-size: 16px; }
         .speaker-tile .speaker-tile-container .speaker-description .speaker-info .speaker-position {
-          color: #888888;
           font-size: 11px;
           line-height: 16px; }
     .speaker-tile .speaker-tile-container .speaker-video-thumb {

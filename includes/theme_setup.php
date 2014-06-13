@@ -21,18 +21,38 @@ function tedx_customize_register ($wp_customize) {
     ));
 
   $wp_customize->add_setting(
-    'promoted_event_year'
+    'promoted_talk_year'
   );
 
   $wp_customize->add_control(
     new Tags_Dropdown_Custom_Control(
-      $wp_customize, 'promoted_event_year', array(
+      $wp_customize, 'promoted_talk_year', array(
         'priority' => 1,
-        'label'    => __('Promoted Event Year', 'tedx'),
+        'label'    => __('Promoted talk Year', 'tedx'),
         'section'  => 'tedx_event',
-        'settings' => 'promoted_event_year',
+        'settings' => 'promoted_talk_year',
       ),
-      array('talk_years'),
+      'talk_years',
+      array(
+        'orderby' => 'name',
+        'order'   => 'ASC'
+      )
+    )
+  );
+
+  $wp_customize->add_setting(
+    'promoted_speaker_year'
+  );
+
+  $wp_customize->add_control(
+    new Tags_Dropdown_Custom_Control(
+      $wp_customize, 'promoted_speaker_year', array(
+        'priority' => 1,
+        'label'    => __('Promoted speaker Year', 'tedx'),
+        'section'  => 'tedx_event',
+        'settings' => 'promoted_speaker_year',
+      ),
+      'event_years',
       array(
         'orderby' => 'name',
         'order'   => 'ASC'

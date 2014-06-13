@@ -68,7 +68,7 @@
       <!-- .col-md-8 -->
 
       <div class="col-md-3">
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('speaker'); ?>
       </div>
       <!-- .col-md-4 -->
 
