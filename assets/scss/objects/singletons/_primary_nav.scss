@@ -61,3 +61,58 @@ nav.primary-nav-secondary {
     }
   }
 }
+
+//-- Mobile Navigation ------------------------------------------------------
+@include respond-to(tablet-portrait) {
+  nav.primary-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1000;
+    .toggle {
+      padding: 15px 20px;
+      color: $white;
+      background-color: $black;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid lighten($black, 10);
+      cursor: pointer;
+    }
+    ul {
+      transition: all 0.2s ease-in-out;
+      background-color: $black;
+      max-height: 0px;
+      overflow: hidden;
+    }
+    &.mobile-visible {
+      ul {
+        /* max-height Being set by angular to provide smooth menu transition */
+      }
+    }
+    li, li a {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    li a {
+      padding: 15px;
+      border-bottom: 1px solid lighten($black, 10);
+    }
+    li.current-menu-item > a {
+      font-weight: bold;
+      padding: 15px;
+      border-bottom: 0;
+      border-left: 4px solid $red;
+    }
+  }
+}
+
+@include respond-to(tablet-large-desktop) {
+  nav.primary-nav {
+    ul.menu[style] {
+      max-height: 100px !important;
+    }
+  }
+}
