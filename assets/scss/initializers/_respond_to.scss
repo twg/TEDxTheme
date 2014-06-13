@@ -1,0 +1,53 @@
+/**
+ * URL: https://gist.github.com/peschee/5734414
+ * Responsive mixin. The media breakpoints are as defined
+ * in the twitter bootstrap framework:
+ *
+ * - phone
+ * - tablet-portrait
+ * - tablet-landscape-desktop
+ * - large-desktop
+ *
+ * Additional parameters for tagetting retina and non-retina
+ * devices
+ *
+ * - retina
+ * - non-retina
+ *
+ * Moreover, a specific value in px can be passed which is
+ * used to generate a max-width media query.
+ */
+@mixin respond-to($media) {
+    /* Landscape phones and down */
+    @if $media == phone {
+        @media (max-width: 480px) { @content; }
+    }
+    /* Landscape phone to portrait tablet */
+    @else if $media == tablet-portrait {
+        @media (max-width: 767px) {@content; }
+    }
+    /* Portrait tablet to landscape and desktop */
+    @else if $media == tablet-landscape-desktop {
+        @media (min-width: 768px) and (max-width: 979px) { @content; }
+    }
+    /* Landscape and above */
+    @else if $media == tablet-large-desktop {
+        @media (min-width: 768px) { @content; }
+    }
+    /* Large desktop */
+    @else if $media == large-desktop {
+        @media (min-width: 1200px) { @content; }
+    }
+    // Non-Retina
+    @else if $media == non-retina {
+        @media screen and (-webkit-max-device-pixel-ratio: 1) { @content; }
+    }
+    // Retina Only
+    @else if $media == retina {
+        @media screen and (-webkit-min-device-pixel-ratio: 2) { @content; }
+    }
+    // Specific max width
+    @else {
+        @media only screen and (max-width: #{$media}px) { @content; }
+    }
+}

@@ -19,6 +19,7 @@
     "gulp-jshint": "^1.6.2",
     "gulp-cache": "^0.1.11",
     "gulp-rename": "^1.2.0",
+    "gulp-order": "^1.1.1",
     "tiny-lr": "0.0.7"
   },
   "scripts": {

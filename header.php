@@ -3,7 +3,7 @@
   $template_url = get_template_directory_uri();
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" ng-app="TEDxTheme">
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -67,7 +67,8 @@
           </div>
         </div><!-- .row -->
 
-        <nav class="primary-nav">
+        <nav class="primary-nav" ng-controller="NavCtrl" ng-class="{'mobile-visible': isVisible}">
+          <div class="toggle visible-xs " ng-click="toggleMenu()">Menu</div>
           <?= $TEDxMenus->primary_nav(); ?>
         </nav>
 

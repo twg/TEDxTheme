@@ -376,15 +376,9 @@ class SpeakerPostType {
     return $speakers;
   }
 
-  function next_speaker_for ($slug) {
+  function next_speaker_for ($slug, $year) {
     // Get the current speaker
     $current_speaker = $this->get_speaker_by_slug($slug);
-    // Get the year associated with this speaker
-    $event_years = wp_get_post_terms($current_speaker->ID, 'event_years');
-    if (!empty($event_years[0])) {
-      $event_year = array_pop($event_years);
-      $year       = $event_year->name;
-    }
     // Get all the speakers from the year
     $speakers = $this->get_speakers_for($year);
     // Count the speakers and initialize some flags
