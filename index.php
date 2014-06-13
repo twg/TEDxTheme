@@ -4,7 +4,6 @@ $query = new TEDxQuery();
 $sticky_posts = $query->sticky_posts(5);
 $unsticky_posts = $query->unsticky_posts();
 ?>
-
 <div class="container spacing-top">
   <div class="row">
 
