@@ -203,16 +203,16 @@ body.page-template-page_templatestemplate_home-php .banner {
     font-size: 80px;
     font-weight: bold; } }
 
-body.page-template-page_templatestemplate_general-php h1.minor {
+body.page-template-default h1.minor {
   font-weight: bold;
   font-size: 16px;
   margin: 0 0 10px;
   line-height: 1.4; }
-body.page-template-page_templatestemplate_general-php section header {
+body.page-template-default section header {
   border-bottom: solid 1px #e5e5e5;
   padding-bottom: 5px;
   margin-bottom: 20px; }
-body.page-template-page_templatestemplate_general-php .partner-tile img, body.page-template-page_templatestemplate_general-php .team-tile img {
+body.page-template-default .partner-tile img, body.page-template-default .team-tile img {
   width: 100%; }
 
 header {
