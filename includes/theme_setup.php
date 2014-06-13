@@ -191,6 +191,23 @@ function tedx_customize_register ($wp_customize) {
       'settings' => 'twitter_follow_button',
     )));
 
+
+  $wp_customize->add_setting(
+    'twitter_account',
+    array(
+      'default'   => '@twg',
+      'transport' => 'refresh',
+    ));
+  $wp_customize->add_control(
+    'tedx_social_twitter_account',
+    array(
+      'priority' => 7,
+      'label'    => __('Twitter Account', 'tedx'),
+      'section'  => 'tedx_social',
+      'settings' => 'twitter_account',
+      'type'     => 'text'
+    ));
+
 }
 
 add_action('customize_register', 'tedx_customize_register');

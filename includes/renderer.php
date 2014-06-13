@@ -1,27 +1,5 @@
 <?php
-//-- Legacy Renderer --------------------------------------------------------
-class Renderer {
-
-    public $data = array();
-    public $base_path;
-
-    function __construct () {
-        $this->base_path = dirname(__FILE__) . '/views/';
-    }
-
-    function render ($view) {
-      trigger_error("Deprecated function called.", E_USER_NOTICE);
-      $template_path = $this->base_path . $view . '.php';
-        ob_start();
-        require_once $template_path;
-        $output = ob_get_clean();
-
-        return $output;
-    }
-}
-
-
-//-- New Renderer -----------------------------------------------------------
+//-- Renderer ---------------------------------------------------------------
 class WP_Render {
 
   public $data = [];
