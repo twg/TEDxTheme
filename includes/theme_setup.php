@@ -20,6 +20,8 @@ function tedx_customize_register ($wp_customize) {
       'priority' => 2147483630
     ));
 
+
+
   $wp_customize->add_setting(
     'promoted_talk_year'
   );
@@ -40,6 +42,9 @@ function tedx_customize_register ($wp_customize) {
     )
   );
 
+
+
+
   $wp_customize->add_setting(
     'promoted_speaker_year'
   );
@@ -59,6 +64,30 @@ function tedx_customize_register ($wp_customize) {
       )
     )
   );
+
+
+
+
+  $wp_customize->add_setting(
+    'promoted_speaker_year',
+    array(
+      'default'   => date('Y'),
+      'transport' => 'refresh',
+    ));
+  $wp_customize->add_control(
+    'tedx_event_promoted_speaker_year',
+    array(
+      'priority' => 2,
+      'label'    => __('Promoted Speaker Year', 'tedx'),
+      'section'  => 'tedx_event',
+      'settings' => 'promoted_speaker_year',
+      'type'     => 'text'
+    ));
+
+
+
+
+
 
   $wp_customize->add_setting(
     'logo'

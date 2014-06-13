@@ -703,7 +703,7 @@ ul.page-numbers {
       display: block;
       height: 292px;
       overflow: hidden;
-      padding: 140px 0 15px;
+      padding: 190px 0 15px;
       position: relative; }
       .speaker-tile .speaker-tile-container .speaker-description .speaker-border {
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.65)));

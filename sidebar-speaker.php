@@ -14,7 +14,7 @@
           <?php
           $video_id = get_post_meta($post->ID, '_speaker_video_id', true);
           if (empty($video_id)) {
-            $video_thumb_src = get_bloginfo('template_url') . '/images/defaults/video-placeholder.jpg';
+            $video_thumb_src = get_template_directory_uri() . '/images/defaults/video-placeholder.jpg';
           } else {
             $video_thumb_src = "http://img.youtube.com/vi/$video_id/0.jpg";
           }
