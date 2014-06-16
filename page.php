@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-  <div class="container contents">
+  <div class="container contents spacing-top">
 
     <section>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
