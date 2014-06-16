@@ -17,7 +17,7 @@
            data-href="<?php the_permalink(); ?>">
 
         <div class="team-photo-wrapper">
-          <img alt='<?php the_title(); ?>' src='<?php echo $thumbnail_src; ?>' class="team-photo">
+          <img alt='<?php the_title(); ?>' src='<?=  $thumbnail_src; ?>' class="team-photo">
         </div>
         <!-- .team-photo-wrapper -->
         <div class="team-info">
@@ -25,7 +25,7 @@
             <?php $twitter = get_post_meta($post->ID, '_team_twitter_link', true); ?>
             <?php if (!empty($twitter)): ?>
               <div class='ir ico tweet ico-box'>
-                <a href='<?php echo $twitter; ?>' target='_blank'>
+                <a href='<?=  $twitter; ?>' target='_blank'>
                   View Tweets
                 </a>
               </div>
@@ -34,16 +34,16 @@
           </div>
           <!-- .team-links -->
           <div class="team-title">
-            <h2><?php echo $post->post_title; ?></h2>
+            <h2><?=  $post->post_title; ?></h2>
 
             <div class="team-role">
-              <?php echo get_post_meta($post->ID, '_team_job_description', true) ?>
+              <?=  get_post_meta($post->ID, '_team_job_description', true) ?>
             </div>
           </div>
           <!-- .team-title -->
           <!--
           <div class='team-details-container'>
-            <?php echo $post->post_content; ?>
+            <?=  $post->post_content; ?>
           </div>-->
           <!-- .team-details-container -->
         </div>

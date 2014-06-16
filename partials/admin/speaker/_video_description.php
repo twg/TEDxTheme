@@ -21,5 +21,5 @@ wp_editor($speaker_video_description, 'speaker_video_description_mce', array(
   )
 ));
 ?>
-<input type="hidden" name="_speaker_video_description_nonce" value="<?php echo wp_create_nonce('tedx_speaker_video_description_nonce'); ?>"/>
+<input type="hidden" name="_speaker_video_description_nonce" value="<?=  wp_create_nonce('tedx_speaker_video_description_nonce'); ?>"/>
 <p class="description">Appears within the TEDx theatre on the right hand side.</p>

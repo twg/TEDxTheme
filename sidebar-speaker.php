@@ -19,7 +19,7 @@
             $video_thumb_src = "http://img.youtube.com/vi/$video_id/0.jpg";
           }
           ?>
-          <img src="<?php echo $video_thumb_src; ?>">
+          <img src="<?= $video_thumb_src; ?>">
         </a>
 
         <div class="media-type">Intro Video</div>

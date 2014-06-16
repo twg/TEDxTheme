@@ -1,0 +1,22 @@
+body.single-talk {
+  .social-twitter {
+    position: relative;
+    top: 7px;
+  }
+  .social-facebook {
+  }
+  .related-talk-tile {
+    padding-bottom: 10px;
+    img {
+      width: 100%;
+    }
+    .media-type {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .related-talk-position {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+}

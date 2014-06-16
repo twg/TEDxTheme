@@ -17,6 +17,48 @@ class TalkPostType {
     add_filter('init', array($this, 'add_permalink_structure'));
     add_action('save_post', array($this, 'save_custom_fields'));
     add_filter('enter_title_here', array($this, 'custom_title_text'));
+    add_shortcode('talk', array($this, 'talk_shortcode'));
+  }
+
+  function talk_shortcode ($atts) {
+    $a = shortcode_atts(array(
+      'year' => '',
+    ), $atts);
+    $year = $a['year'];
+    $talks = $this->get_talks_from_year($year);
+    ob_start();
+    require(get_template_directory() . '/shortcode_templates/talk_shortcode.php');
+    $output = ob_get_clean();
+    return $output;
+  }
+
+
+  function get_talks_for ($year, $options = array()) {
+    $arguments = array(
+      'post_type' => 'talk',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'talk_years',
+          'field'    => 'slug',
+          'terms'    => strval($year)
+        )
+      )
+    );
+    if (!empty($options['limit'])) {
+      $arguments['posts_per_page'] = $options['limit'];
+    } else {
+      $arguments['posts_per_page'] = 100;
+    }
+    if (!empty($options['exclude']) && $options['exclude'] === true) {
+      global $post;
+      $arguments['post__not_in'] = array($post->ID);
+    }
+    if (!empty($options['exclude']) && is_array($options['exclude'])) {
+      $arguments['post__not_in'] = $options['exclude'];
+    }
+    $query = new WP_Query($arguments);
+
+    return $query;
   }
 
   function add_post_type () {
@@ -211,7 +253,7 @@ class TalkPostType {
   function get_talks () {
     $defaults = array(
       'post_type'      => 'talk',
-      'posts_per_page' => 36,
+      'posts_per_page' => 360,
       'meta_query'     => array(
         array(
           'key'     => '_talk_video_id',
@@ -256,6 +298,24 @@ class TalkPostType {
       return array();
     }
   }
+
+  function get_talks_from_year ($slug) {
+    $arguments = array(
+      'post_type'      => 'talk',
+      'posts_per_page' => 1000,
+      'tax_query'      => array(
+        array(
+          'taxonomy' => 'talk_years',
+          'field'    => 'slug',
+          'terms'    => strval($slug)
+        )
+      )
+    );
+    $query     = new WP_Query($arguments);
+
+    return $query;
+  }
+
 
   function get_year ($slug) {
     if (!$this->current_talk) {

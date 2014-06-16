@@ -7,11 +7,11 @@ $template_url = get_template_directory_uri();
       <div class="row">
         <div class="col-md-4 col-sm-12 legal">
           This TEDx event is independently organized.<br>
-          Copyright © <?php echo get_theme_mod('event_name', 'TEDx') ?> <?php echo date("Y"); ?>. All Rights Reserved. <a
+          Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved. <a
             href="/legal-and-privacy/">Legal &amp; Privacy</a>
         </div>
         <div class="col-md-3 col-sm-12">
-          <?php echo get_theme_mod('twitter_follow_button'); ?>
+          <?= get_theme_mod('twitter_follow_button'); ?>
         </div>
         <div class="col-md-5 col-sm-12 web-partners">
           <div class="built-by gutter-right gutter-bottom">Built By</div>
@@ -26,8 +26,8 @@ $template_url = get_template_directory_uri();
 <?php wp_footer(); ?>
 
 <!-- Compiled JS -->
-<script src="<?php echo $template_url; ?>/dist/js/vendor.js" type="text/javascript"></script>
-<script src="<?php echo $template_url; ?>/dist/js/application.js" type="text/javascript"></script>
+<script src="<?= $template_url; ?>/dist/js/vendor.js" type="text/javascript"></script>
+<script src="<?= $template_url; ?>/dist/js/application.js" type="text/javascript"></script>
 
 <!-- Live Reload -->
 <?php define('WP_ENV', 'development'); ?>

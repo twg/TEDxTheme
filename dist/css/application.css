@@ -299,6 +299,20 @@ body.single-speaker .related-speaker-tile {
     text-transform: uppercase;
     font-size: 11px; }
 
+body.single-talk .social-twitter {
+  position: relative;
+  top: 7px; }
+body.single-talk .related-talk-tile {
+  padding-bottom: 10px; }
+  body.single-talk .related-talk-tile img {
+    width: 100%; }
+  body.single-talk .related-talk-tile .media-type {
+    text-transform: uppercase;
+    font-size: 11px; }
+  body.single-talk .related-talk-tile .related-talk-position {
+    text-transform: uppercase;
+    font-size: 11px; }
+
 header {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -681,6 +695,19 @@ ul.page-numbers {
     .commentlist .reply a:hover {
       text-decoration: none;
       background: #e9e9e9; }
+
+.talk-tile {
+  margin-bottom: 25px;
+  overflow: hidden; }
+  .talk-tile .talk-photo {
+    position: relative;
+    max-width: 100%;
+    top: 0; }
+  .talk-tile .talk-meta {
+    text-transform: uppercase;
+    font-size: 11px; }
+  .talk-tile .talk-speaker-role {
+    height: 70px; }
 
 .team-tile {
   margin-bottom: 25px;

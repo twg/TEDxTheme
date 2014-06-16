@@ -14,6 +14,7 @@
 @import "pages/template_page"; //page.php
 @import "pages/template_schedule";
 @import "pages/single_speaker";
+@import "pages/single_talk";
 
 
 //-- Singletons -------------------------------------------------------------
@@ -32,6 +33,7 @@
 @import "objects/not_found";
 @import "objects/pagination";
 @import "objects/comments_template";
+@import "objects/talk_tile";
 @import "objects/team_tile";
 @import "objects/speaker_tile";
 @import "objects/video_container";

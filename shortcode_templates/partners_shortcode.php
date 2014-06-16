@@ -1,6 +1,6 @@
 <section>
   <header>
-    <h1 class="minor"><?php echo $name; ?></h1>
+    <h1 class="minor"><?= $name; ?></h1>
   </header>
   <div class="row">
     <?php if ($partners->have_posts()): while ($partners->have_posts()) : $partners->the_post(); ?>
@@ -14,8 +14,8 @@
         }
         ?>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 partner-tile">
-          <a href='<?php echo get_post_meta(get_the_ID(), '_partner_url', true); ?>' target="_blank">
-            <img alt='<?php the_title(); ?>' src='<?php echo $thumbnail_src; ?>'/>
+          <a href='<?= get_post_meta(get_the_ID(), '_partner_url', true); ?>' target="_blank">
+            <img alt='<?php the_title(); ?>' src='<?= $thumbnail_src; ?>'/>
           </a>
         </div>
       <?php endif; ?>

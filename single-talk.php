@@ -5,10 +5,8 @@
         <div class="post-content">
           <?php if (have_posts()): while (have_posts()) : the_post(); ?>
             <?php
-            $speaker  = get_post();
-            $video_id = get_post_meta($speaker->ID, '_speaker_video_id', true);
-            $name     = $speaker->post_title;
-            $excerpt  = $speaker->post_excerpt;
+            $talk     = get_post();
+            $video_id = get_post_meta($talk->ID, '_talk_video_id', true);
             ?>
             <div class="page-header">
               <h2><?php the_title(); ?>
@@ -28,7 +26,7 @@
               <div class="col-md-6">
                 <div class="pull-right">
                   <span class="social social-facebook">
-                    <div class="fb-like" data-href="<?= get_permalink($speaker->ID); ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <div class="fb-like" data-href="<?= get_permalink($talk->ID); ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
                   </span>
                   <span class="social social-twitter">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-via="<?= get_theme_mod('twitter_account') ?>">Tweet</a>
@@ -43,8 +41,9 @@
         </div>
       </div>
       <div class="col-md-3">
-        <?php get_sidebar('speaker'); ?>
+        <?php get_sidebar('talk'); ?>
       </div>
+      <!-- .col-md-3 -->
     </div>
   </div>
 <?php get_footer(); ?>
