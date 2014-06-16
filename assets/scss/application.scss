@@ -12,6 +12,8 @@
 @import "pages/layout";
 @import "pages/template_home";
 @import "pages/template_page"; //page.php
+@import "pages/single_speaker";
+
 
 //-- Singletons -------------------------------------------------------------
 
@@ -30,6 +32,8 @@
 @import "objects/pagination";
 @import "objects/comments_template";
 @import "objects/team_tile";
+@import "objects/speaker_tile";
+@import "objects/video_container";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

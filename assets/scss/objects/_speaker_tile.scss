@@ -1,0 +1,158 @@
+.speaker-tile {
+  margin-bottom: 25px;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+  }
+  .speaker-tile-container {
+    background-color: #000;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    text-align: center;
+
+    .speaker-description {
+      background-position: center top;
+      background-size: cover;
+      color: #FFF;
+      display: block;
+      height: 292px;
+      overflow: hidden;
+      padding: 190px 0 15px;
+      position: relative;
+
+      .speaker-border {
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 80%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.65)));
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 80%);
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 80%);
+        background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 80%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 80%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+
+        color: #FFF;
+        display: block;
+        border: 0 solid transparent;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        z-index: 0;
+        width: 100%;
+
+        position: absolute;
+
+      }
+      .speaker-info {
+        position: absolute;
+        margin: auto;
+        width: 100%;
+        .speaker-title {
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        .speaker-position {
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .speaker-video-thumb {
+      border-top: 1px solid #FFF;
+      position: relative;
+      text-align: center;
+
+      .hover-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .hover-table {
+        display: table;
+        height: 100%;
+        width: 100%;
+        transition: opacity 0.3s linear;
+        -webkit-transition: opacity 0.3s linear;
+        -moz-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        opacity: 0;
+        -moz-opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        div {
+          display: table-cell;
+          vertical-align: middle;
+          span {
+            color: #FFFFFF;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        position: relative;
+        transition: opacity 0.3s linear;
+        -webkit-transition: opacity 0.3s linear;
+        -moz-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+      }
+    }
+
+    &:hover {
+
+      .speaker-description {
+        .speaker-border {
+          border: 10px solid #ff2b06;
+        }
+      }
+      img {
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+        -moz-opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      }
+
+      .speaker-video-thumb {
+        .hover-table {
+          filter: alpha(opacity=100);
+          opacity: 1;
+          -moz-opacity: 1;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        }
+        img {
+          height: auto;
+          opacity: .4;
+          filter: alpha(opacity=40);
+          -moz-opacity: .4;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+          filter: alpha(opacity=40);
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}

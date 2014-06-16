@@ -20,25 +20,74 @@ function tedx_customize_register ($wp_customize) {
       'priority' => 2147483630
     ));
 
+
+
   $wp_customize->add_setting(
-    'promoted_event_year'
+    'promoted_talk_year'
   );
 
   $wp_customize->add_control(
     new Tags_Dropdown_Custom_Control(
-      $wp_customize, 'promoted_event_year', array(
+      $wp_customize, 'promoted_talk_year', array(
         'priority' => 1,
-        'label'    => __('Promoted Event Year', 'tedx'),
+        'label'    => __('Promoted talk Year', 'tedx'),
         'section'  => 'tedx_event',
-        'settings' => 'promoted_event_year',
+        'settings' => 'promoted_talk_year',
       ),
-      array('talk_years'),
+      'talk_years',
       array(
         'orderby' => 'name',
         'order'   => 'ASC'
       )
     )
   );
+
+
+
+
+  $wp_customize->add_setting(
+    'promoted_speaker_year'
+  );
+
+  $wp_customize->add_control(
+    new Tags_Dropdown_Custom_Control(
+      $wp_customize, 'promoted_speaker_year', array(
+        'priority' => 1,
+        'label'    => __('Promoted speaker Year', 'tedx'),
+        'section'  => 'tedx_event',
+        'settings' => 'promoted_speaker_year',
+      ),
+      'event_years',
+      array(
+        'orderby' => 'name',
+        'order'   => 'ASC'
+      )
+    )
+  );
+
+
+
+
+  $wp_customize->add_setting(
+    'promoted_speaker_year',
+    array(
+      'default'   => date('Y'),
+      'transport' => 'refresh',
+    ));
+  $wp_customize->add_control(
+    'tedx_event_promoted_speaker_year',
+    array(
+      'priority' => 2,
+      'label'    => __('Promoted Speaker Year', 'tedx'),
+      'section'  => 'tedx_event',
+      'settings' => 'promoted_speaker_year',
+      'type'     => 'text'
+    ));
+
+
+
+
+
 
   $wp_customize->add_setting(
     'logo'
@@ -190,6 +239,23 @@ function tedx_customize_register ($wp_customize) {
       'section'  => 'tedx_social',
       'settings' => 'twitter_follow_button',
     )));
+
+
+  $wp_customize->add_setting(
+    'twitter_account',
+    array(
+      'default'   => '@twg',
+      'transport' => 'refresh',
+    ));
+  $wp_customize->add_control(
+    'tedx_social_twitter_account',
+    array(
+      'priority' => 7,
+      'label'    => __('Twitter Account', 'tedx'),
+      'section'  => 'tedx_social',
+      'settings' => 'twitter_account',
+      'type'     => 'text'
+    ));
 
 }
 

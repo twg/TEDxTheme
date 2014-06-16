@@ -8,9 +8,8 @@ if (!class_exists('WP_Customize_Control'))
 class Tags_Dropdown_Custom_Control extends WP_Customize_Control {
   private $tags = false;
 
-  public function __construct ($manager, $id, $args = array(), $taxonomies = array(), $options = array()) {
+  public function __construct ($manager, $id, $args = array(), $taxonomies = '', $options = array()) {
     $this->tags = get_terms($taxonomies, $options);
-
     parent::__construct($manager, $id, $args);
   }
 
@@ -18,9 +17,6 @@ class Tags_Dropdown_Custom_Control extends WP_Customize_Control {
    * Render the content on the theme customizer page
    */
   public function render_content () {
-    if (empty($this->tags)) {
-      return false;
-    }
     ?>
     <label>
       <span class="customize-tags-dropdown"><?php echo esc_html($this->label); ?></span>

@@ -9,7 +9,7 @@ class SpeakerPostType {
     '_speaker_twitter_link'
   );
 
-  function __construct() {
+  function __construct () {
 
     add_action('init', array($this, 'add_taxonomy'));
     add_action('init', array($this, 'add_post_type'));
@@ -27,84 +27,76 @@ class SpeakerPostType {
     add_filter('body_class', array($this, 'add_body_class'));
     add_filter('nav_menu_css_class', array($this, 'force_active_state'), 10, 3);
 
-    add_shortcode('speaker_card', array($this, 'show_speaker_card'));
+    add_shortcode('speaker_card', array($this, 'speaker_card_shortcode'));
   }
 
-  function show_speaker_card($atts) {
-    extract(shortcode_atts(array(
+
+  function speaker_card_shortcode ($atts) {
+    $a = shortcode_atts(array(
       'slug' => '',
-    ), $atts));
+    ), $atts);
 
-    $template = get_template_directory() . "/speakers/_speaker_new.php";
+    $slug = $a['slug'];
+    $slugs = array_filter(explode(",", $slug), "trim");
+
     ob_start();
-
-    $speaker = $this->get_speaker_by_slug($slug);
-    $video_id = $this->get_video_id($slug);
-    $name = $speaker->post_title;
-    $excerpt = $speaker->post_excerpt;
-    $description = get_post_meta($speaker->ID, '_speaker_video_description', true);
-    $image = wp_get_attachment_image_src(get_post_thumbnail_id($speaker->ID), 'speaker');
-    if (is_array($image) && !empty($image[0])) {
-      $image = $image[0];
-    }
-
-    include($template);
+    require(get_template_directory() . '/shortcode_templates/speaker_card_shortcode.php');
     $output = ob_get_clean();
 
     return $output;
   }
 
-  function add_post_type() {
+  function add_post_type () {
     // Labels
     $speaker_labels = array(
-      'name' => __('Speakers'),
+      'name'          => __('Speakers'),
       'singular_name' => __('Speaker'),
-      'add_new' => __('Add New'),
-      'all_items' => __('All Speakers'),
-      'add_new_item' => __('Add New Speaker'),
-      'edit_item' => __('Edit Speaker'),
-      'new_item' => __('New Speaker'),
-      'view_item' => __('View Speaker'),
-      'search_items' => __('Search Speakers'),
-      'not_found' => __('No Speakers Found')
+      'add_new'       => __('Add New'),
+      'all_items'     => __('All Speakers'),
+      'add_new_item'  => __('Add New Speaker'),
+      'edit_item'     => __('Edit Speaker'),
+      'new_item'      => __('New Speaker'),
+      'view_item'     => __('View Speaker'),
+      'search_items'  => __('Search Speakers'),
+      'not_found'     => __('No Speakers Found')
     );
     // Settings
     $speaker_settings = array(
-      'labels' => $speaker_labels,
-      'public' => true,
-      'publicly_queryable' => true,
-      'show_ui' => true,
-      'menu_icon' => get_stylesheet_directory_uri() . '/images/custom_post_types/speaker.png',
-      'show_in_menu' => true,
-      'query_var' => true,
-      'rewrite' => array('slug' => 'speakers', 'with_front' => false),
-      'capability_type' => 'post',
-      'has_archive' => true,
-      'hierarchical' => false,
-      'menu_position' => 104,
-      'taxonomies' => array('event_years'),
-      'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'page-attributes'),
+      'labels'               => $speaker_labels,
+      'public'               => true,
+      'publicly_queryable'   => true,
+      'show_ui'              => true,
+      'menu_icon'            => get_stylesheet_directory_uri() . '/images/custom_post_types/speaker.png',
+      'show_in_menu'         => true,
+      'query_var'            => true,
+      'rewrite'              => array('slug' => 'speakers', 'with_front' => false),
+      'capability_type'      => 'post',
+      'has_archive'          => true,
+      'hierarchical'         => false,
+      'menu_position'        => 104,
+      'taxonomies'           => array('event_years'),
+      'supports'             => array('title', 'editor', 'excerpt', 'thumbnail', 'page-attributes'),
       'register_meta_box_cb' => array($this, 'add_meta_boxes')
     );
     // Register the actual type
     register_post_type('speaker', $speaker_settings);
   }
 
-  function add_taxonomy() {
+  function add_taxonomy () {
     register_taxonomy(
       'event_years',
       'speaker',
       array(
-        'label' => __('Event Year'),
+        'label'             => __('Event Year'),
         'show_in_nav_menus' => true,
-        'show_ui' => true,
-        'hierarchical' => true,
-        'rewrite' => array('slug' => 'speakers/year'),
-        'query_var' => 'event_year'
+        'show_ui'           => true,
+        'hierarchical'      => true,
+        'rewrite'           => array('slug' => 'speakers/year'),
+        'query_var'         => 'event_year'
       ));
   }
 
-  function add_permalink_structure() {
+  function add_permalink_structure () {
     // Add a new query tag
     add_rewrite_rule('speakers/previous/(alphabetical|yearly)/?',
       'index.php?post_type=speaker&sort_type=$matches[1]&previous=1',
@@ -117,14 +109,14 @@ class SpeakerPostType {
       'top');
   }
 
-  function add_query_vars($vars) {
+  function add_query_vars ($vars) {
     $vars[] = 'sort_type';
     $vars[] = 'previous';
 
     return $vars;
   }
 
-  function create_custom_rewrite_rules() {
+  function create_custom_rewrite_rules () {
     global $wp_rewrite;
 
     // Define custom rewrite tokens
@@ -147,7 +139,7 @@ class SpeakerPostType {
 
   } // End create_custom_rewrite_rules()
 
-  function custom_title_text($title) {
+  function custom_title_text ($title) {
     $screen = get_current_screen();
     if ($screen->post_type == 'speaker') {
       $title = 'Enter speaker name (eg. John Smith)';
@@ -156,14 +148,14 @@ class SpeakerPostType {
     return $title;
   }
 
-  function add_meta_boxes() {
+  function add_meta_boxes () {
     add_meta_box('speaker_website_url', 'Website URL', array($this, 'render_website_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_video_id', 'Video ID', array($this, 'render_video_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_video_description', 'Video Description', array($this, 'render_video_description_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_speaker_twitter_link', 'Twitter Link', array($this, 'render_speaker_twitter_meta_boxes'), 'speaker', 'normal', 'high');
   }
 
-  function force_active_state($classes, $item, $args) {
+  function force_active_state ($classes, $item, $args) {
     if ($item->title == 'Speakers' && strpos($_SERVER['REQUEST_URI'], '/speakers') !== false) {
       $classes[] = 'current-menu-item';
     }
@@ -171,7 +163,7 @@ class SpeakerPostType {
     return $classes;
   }
 
-  function render_video_meta_boxes() {
+  function render_video_meta_boxes () {
     WP_Render::partial(
       'partials/admin/speaker/_video_id.php',
       [
@@ -179,7 +171,7 @@ class SpeakerPostType {
       ]);
   }
 
-  function render_speaker_twitter_meta_boxes() {
+  function render_speaker_twitter_meta_boxes () {
     WP_Render::partial(
       'partials/admin/speaker/_twitter_link.php',
       [
@@ -187,7 +179,7 @@ class SpeakerPostType {
       ]);
   }
 
-  function render_website_meta_boxes() {
+  function render_website_meta_boxes () {
     WP_Render::partial(
       'partials/admin/speaker/_website_url.php',
       [
@@ -195,7 +187,7 @@ class SpeakerPostType {
       ]);
   }
 
-  function render_video_description_boxes() {
+  function render_video_description_boxes () {
     WP_Render::partial(
       'partials/admin/speaker/_video_description.php',
       [
@@ -203,7 +195,7 @@ class SpeakerPostType {
       ]);
   }
 
-  function new_excerpt_length() {
+  function new_excerpt_length () {
     global $post;
     if ($post->post_type == 'speaker') {
       return 25;
@@ -212,18 +204,18 @@ class SpeakerPostType {
     }
   }
 
-  function speaker_columns($columns) {
+  function speaker_columns ($columns) {
     $columns = array(
-      'cb' => '<input type="checkbox" />',
+      'cb'    => '<input type="checkbox" />',
       'thumb' => 'Thumbnail',
       'title' => __('Speaker Name'),
-      'year' => __('Year(s)')
+      'year'  => __('Year(s)')
     );
 
     return $columns;
   }
 
-  function speaker_columns_content($column) {
+  function speaker_columns_content ($column) {
     global $post;
     switch ($column) {
       case 'thumb':
@@ -237,7 +229,7 @@ class SpeakerPostType {
         break;
       case 'year':
         // $terms = get_terms('event_years');
-        $terms = wp_get_post_terms(get_the_ID(), 'event_years');
+        $terms  = wp_get_post_terms(get_the_ID(), 'event_years');
         $output = array();
         foreach ($terms as $term) {
           $output[] = $term->name;
@@ -252,7 +244,7 @@ class SpeakerPostType {
     }
   }
 
-  function add_body_class($classes) {
+  function add_body_class ($classes) {
     foreach ($classes as $class) {
       if ($class == 'post-type-archive-speaker') {
         $classes[] = 'speakers-page';
@@ -262,7 +254,7 @@ class SpeakerPostType {
     return $classes;
   }
 
-  function save_custom_fields($post_id) {
+  function save_custom_fields ($post_id) {
     foreach ($this->custom_fields as $field) {
       if (!empty($_POST[$field])) {
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
@@ -283,14 +275,14 @@ class SpeakerPostType {
     }
   }
 
-  function get_speakers_for($year, $options = array()) {
+  function get_speakers_for ($year, $options = array()) {
     $arguments = array(
       'post_type' => 'speaker',
       'tax_query' => array(
         array(
           'taxonomy' => 'event_years',
-          'field' => 'slug',
-          'terms' => strval($year)
+          'field'    => 'slug',
+          'terms'    => strval($year)
         )
       )
     );
@@ -311,13 +303,13 @@ class SpeakerPostType {
     return $query;
   }
 
-  function get_talks($slug, $limit = false) {
-    $speaker = $this->get_speaker_by_slug($slug);
+  function get_talks ($slug, $limit = false) {
+    $speaker   = $this->get_speaker_by_slug($slug);
     $arguments = array(
-      'post_type' => 'talk',
+      'post_type'  => 'talk',
       'meta_query' => array(
         array(
-          'key' => '_talk_speaker_id',
+          'key'   => '_talk_speaker_id',
           'value' => strval($speaker->ID)
         )
       )
@@ -330,13 +322,13 @@ class SpeakerPostType {
     return $query->posts;
   }
 
-  function get_previous_speakers() {
+  function get_previous_speakers () {
     $arguments = array(
-      'post_type' => 'speaker',
+      'post_type'      => 'speaker',
       'posts_per_page' => 100
     );
-    $query = new WP_Query($arguments);
-    $by_year = array();
+    $query     = new WP_Query($arguments);
+    $by_year   = array();
     foreach ($query->posts as $post) {
       $terms = wp_get_object_terms($post->ID, 'event_years');
       foreach ($terms as $term) {
@@ -349,20 +341,20 @@ class SpeakerPostType {
     return $by_year;
   }
 
-  function get_previous_speakers_alphabetical() {
+  function get_previous_speakers_alphabetical () {
     $arguments = array(
-      'post_type' => 'speaker',
+      'post_type'      => 'speaker',
       'posts_per_page' => 100,
-      'tax_query' => array(
+      'tax_query'      => array(
         array(
           'taxonomy' => 'event_years',
-          'field' => 'slug',
-          'terms' => '2012',
+          'field'    => 'slug',
+          'terms'    => '2012',
           'operator' => 'NOT IN'
         )
       )
     );
-    $query = new WP_Query($arguments);
+    $query     = new WP_Query($arguments);
     if (!empty($query->posts)) {
       return $this->alphabetical($query->posts);
     } else {
@@ -370,35 +362,29 @@ class SpeakerPostType {
     }
   }
 
-  function last_name_sort($a, $b) {
+  function last_name_sort ($a, $b) {
     $a_last_name = end(split(' ', trim($a->post_title)));
     $b_last_name = end(split(' ', trim($b->post_title)));
 
     return strcasecmp($a_last_name, $b_last_name);
   }
 
-  function alphabetical($speakers) {
+  function alphabetical ($speakers) {
     $ordered = array();
     usort($speakers, array($this, 'last_name_sort'));
 
     return $speakers;
   }
 
-  function next_speaker_for($slug) {
+  function next_speaker_for ($slug, $year) {
     // Get the current speaker
     $current_speaker = $this->get_speaker_by_slug($slug);
-    // Get the year associated with this speaker
-    $event_years = wp_get_post_terms($current_speaker->ID, 'event_years');
-    if (!empty($event_years[0])) {
-      $event_year = array_pop($event_years);
-      $year = $event_year->name;
-    }
     // Get all the speakers from the year
     $speakers = $this->get_speakers_for($year);
     // Count the speakers and initialize some flags
-    $speakers_count = count($speakers->posts);
+    $speakers_count        = count($speakers->posts);
     $current_speaker_index = false;
-    $next_speaker_index = false;
+    $next_speaker_index    = false;
     // Loop through and find out our current position
     foreach ($speakers->posts as $index => $speaker) {
       if ($speaker->ID == $current_speaker->ID) {
@@ -424,7 +410,7 @@ class SpeakerPostType {
     return $this->get_speaker_by_id($next_speaker_id);
   }
 
-  function get_sort_type() {
+  function get_sort_type () {
     global $wp_query;
     if (empty($wp_query->query['sort_type'])) {
       return 'current';
@@ -441,13 +427,13 @@ class SpeakerPostType {
     }
   }
 
-  function get_speaker_by_slug($slug) {
+  function get_speaker_by_slug ($slug) {
     $arguments = array(
-      'post_type' => 'speaker',
-      'name' => $slug,
+      'post_type'      => 'speaker',
+      'name'           => $slug,
       'posts_per_page' => 100
     );
-    $query = new WP_Query($arguments);
+    $query     = new WP_Query($arguments);
     if (!empty($query->posts[0])) {
       return $query->posts[0];
     } else {
@@ -455,7 +441,7 @@ class SpeakerPostType {
     }
   }
 
-  function get_latest_year($slug) {
+  function get_latest_year ($slug) {
     $speaker = $this->get_speaker_by_slug($slug);
     if ($speaker) {
       $event_years = wp_get_post_terms($speaker->ID, 'event_years');
@@ -469,7 +455,7 @@ class SpeakerPostType {
     }
   }
 
-  function get_video_id($slug) {
+  function get_video_id ($slug) {
     $speaker = $this->get_speaker_by_slug($slug);
     if ($speaker) {
       return get_post_meta($speaker->ID, '_speaker_video_id', true);
@@ -478,7 +464,7 @@ class SpeakerPostType {
     }
   }
 
-  function get_twitter_link($slug) {
+  function get_twitter_link ($slug) {
     $speaker = $this->get_speaker_by_slug($slug);
     if ($speaker) {
       return get_post_meta($speaker->ID, '_speaker_twitter_link', true);
@@ -487,12 +473,12 @@ class SpeakerPostType {
     }
   }
 
-  function get_speaker_by_id($id) {
+  function get_speaker_by_id ($id) {
     $arguments = array(
       'post_type' => 'speaker',
-      'p' => $id
+      'p'         => $id
     );
-    $query = new WP_Query($arguments);
+    $query     = new WP_Query($arguments);
     if (!empty($query->posts[0])) {
       return $query->posts[0];
     } else {
@@ -500,11 +486,11 @@ class SpeakerPostType {
     }
   }
 
-  function yearly_permalink() {
+  function yearly_permalink () {
     return get_bloginfo('url') . '/speakers/previous/yearly/';
   }
 
-  function alphabetical_permalink() {
+  function alphabetical_permalink () {
     return get_bloginfo('url') . '/speakers/previous/alphabetical/';
   }
 

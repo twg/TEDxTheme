@@ -4,7 +4,7 @@
   "description": "A TEDx WordPress theme built by The Working Group (http://twg.ca) and TEDxToronto.",
   "main": "Gulpfile.js",
   "dependencies": {
-    "gulp": "^3.7.0",
+    "gulp": "^3.7.0"
   },
   "devDependencies": {
     "gulp": "^3.7.0",

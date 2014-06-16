@@ -1,0 +1,22 @@
+body.single-speaker {
+  .social-twitter {
+    position: relative;
+    top: 7px;
+  }
+  .social-facebook {
+  }
+  .related-speaker-tile {
+    padding-bottom: 10px;
+    img {
+      width: 100%;
+    }
+    .media-type {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .related-speaker-position {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+}
