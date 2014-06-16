@@ -10,7 +10,7 @@ $unsticky_posts = $query->unsticky_posts();
     <div class="col-md-9">
 
       <div class="page-header">
-        <h4>Blog Posts</h4>
+        <h4><?= TEDxHelpers::index_title('Blog Posts'); ?></h4>
       </div><!-- .page-header -->
 
       <?php

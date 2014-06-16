@@ -10,6 +10,7 @@ require_once 'includes/theme/menus.php';
 
 //-- Utilities --------------------------------------------------------------
 require_once 'includes/renderer.php';
+require_once 'includes/helpers/tedx_helpers.php';
 
 //-- Advanced Custom Fields -------------------------------------------------
 require_once 'includes/advanced_custom_fields/template_home.php';
