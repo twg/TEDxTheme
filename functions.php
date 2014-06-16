@@ -33,3 +33,6 @@ $TalkPostType = new TalkPostType();
 
 require_once 'includes/custom_post_types/speaker.php';
 $SpeakerPostType = new SpeakerPostType();
+
+require_once 'includes/custom_post_types/schedule_items.php';
+$ScheduleItemsPostType = new ScheduleItemsPostType();

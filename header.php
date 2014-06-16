@@ -14,6 +14,7 @@
   <link href="//www.google-analytics.com" rel="dns-prefetch">
 
   <!-- JQuery -->
+  <script src="//maps.google.com/maps/api/js?sensor=false"></script>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
@@ -61,7 +62,12 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="call-to-action">
-              <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-danger pull-right"><?= get_theme_mod('button_callout_text', 'CTA') ?></a>
+
+              <?php $button_callout_text = get_theme_mod('button_callout_text', 'CTA');?>
+
+              <?php if(!empty($button_callout_text)): ?>
+              <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-danger pull-right"><?= $button_callout_text ?></a>
+              <?php endif;?>
               <span class="copy pull-right clear"><?= get_theme_mod('header_callout', 'Header Callout') ?></span>
             </div>
           </div>
