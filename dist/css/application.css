@@ -234,6 +234,57 @@ body.page-template-default section header {
 body.page-template-default .partner-tile img, body.page-template-default .team-tile img {
   width: 100%; }
 
+table.event-listing {
+  width: 100%;
+  empty-cells: show;
+  border-spacing: 0 20px;
+  margin-top: -20px;
+  border-collapse: separate;
+  text-align: left; }
+  table.event-listing td {
+    border-top: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 17px 15px 14px;
+    position: relative; }
+    table.event-listing td .button {
+      margin: -10px 0 -10px 10px; }
+    table.event-listing td:first-child {
+      border-radius: 5px 0 0 5px;
+      border-left: solid 1px #e5e5e5; }
+  table.event-listing .description {
+    border-radius: 0 5px 5px 0;
+    border-right: solid 1px #e5e5e5; }
+  table.event-listing .time {
+    color: #000;
+    min-width: 85px; }
+  table.event-listing .no-talks td {
+    background: #f6f6f6; }
+  table.event-listing .no-talks .description {
+    color: #c2c2c2;
+    font-size: 14px; }
+  table.event-listing tr:before {
+    content: "";
+    background: #e5e5e5;
+    display: block;
+    height: 20px;
+    left: 35px;
+    margin-top: -20px;
+    position: relative;
+    width: 3px;
+    z-index: 100; }
+  table.event-listing tr:first-child:before {
+    width: 0px; }
+  table.event-listing tr:first-child td:after {
+    display: none; }
+
+.none-description, .coffee-description, .party-description {
+  float: left;
+  position: relative; }
+
+.google-map-container {
+  width: 270px;
+  height: 270px; }
+
 body.single-speaker .social-twitter {
   position: relative;
   top: 7px; }

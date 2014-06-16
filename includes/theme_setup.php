@@ -20,53 +20,21 @@ function tedx_customize_register ($wp_customize) {
       'priority' => 2147483630
     ));
 
-
-
   $wp_customize->add_setting(
-    'promoted_talk_year'
-  );
-
+    'promoted_talk_year',
+    array(
+      'default'   => date('Y'),
+      'transport' => 'refresh',
+    ));
   $wp_customize->add_control(
-    new Tags_Dropdown_Custom_Control(
-      $wp_customize, 'promoted_talk_year', array(
-        'priority' => 1,
-        'label'    => __('Promoted talk Year', 'tedx'),
-        'section'  => 'tedx_event',
-        'settings' => 'promoted_talk_year',
-      ),
-      'talk_years',
-      array(
-        'orderby' => 'name',
-        'order'   => 'ASC'
-      )
-    )
-  );
-
-
-
-
-  $wp_customize->add_setting(
-    'promoted_speaker_year'
-  );
-
-  $wp_customize->add_control(
-    new Tags_Dropdown_Custom_Control(
-      $wp_customize, 'promoted_speaker_year', array(
-        'priority' => 1,
-        'label'    => __('Promoted speaker Year', 'tedx'),
-        'section'  => 'tedx_event',
-        'settings' => 'promoted_speaker_year',
-      ),
-      'event_years',
-      array(
-        'orderby' => 'name',
-        'order'   => 'ASC'
-      )
-    )
-  );
-
-
-
+    'tedx_event_promoted_talk_year',
+    array(
+      'priority' => 2,
+      'label'    => __('Promoted Talk Year', 'tedx'),
+      'section'  => 'tedx_event',
+      'settings' => 'promoted_talk_year',
+      'type'     => 'text'
+    ));
 
   $wp_customize->add_setting(
     'promoted_speaker_year',
@@ -83,11 +51,6 @@ function tedx_customize_register ($wp_customize) {
       'settings' => 'promoted_speaker_year',
       'type'     => 'text'
     ));
-
-
-
-
-
 
   $wp_customize->add_setting(
     'logo'
@@ -214,7 +177,6 @@ function tedx_customize_register ($wp_customize) {
       'type'     => 'text'
     ));
 
-
   // Section
   $wp_customize->add_section(
     'tedx_social',
@@ -223,14 +185,12 @@ function tedx_customize_register ($wp_customize) {
       'priority' => 2147483631
     ));
 
-
   $wp_customize->add_setting(
     'twitter_follow_button',
     array(
       'default'   => '<a href="https://twitter.com/twg" class="twitter-follow-button" data-show-count="false">Follow @twg</a>',
       'transport' => 'refresh',
     ));
-
 
   $wp_customize->add_control(
     new Textarea_Custom_Control(
@@ -239,7 +199,6 @@ function tedx_customize_register ($wp_customize) {
       'section'  => 'tedx_social',
       'settings' => 'twitter_follow_button',
     )));
-
 
   $wp_customize->add_setting(
     'twitter_account',
@@ -256,7 +215,6 @@ function tedx_customize_register ($wp_customize) {
       'settings' => 'twitter_account',
       'type'     => 'text'
     ));
-
 }
 
 add_action('customize_register', 'tedx_customize_register');
