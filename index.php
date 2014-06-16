@@ -15,7 +15,7 @@ $unsticky_posts = $query->unsticky_posts();
 
       <?php
         if(count($unsticky_posts) > 0):
-          foreach ($unsticky_posts as $index => $post):
+          foreach ($unsticky_posts as $index => $post): setup_postdata($post);
             WP_Render::partial('partials/blog/_post_excerpt.php');
           endforeach;
         else:
