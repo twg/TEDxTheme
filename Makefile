@@ -1,7 +1,7 @@
 all: theme
 
 theme: clean
-	mkdir -p build/stage
+	mkdir -p build/tedx
 	rsync -a --exclude build \
 	         --exclude assets \
 	         --exclude vendor \
@@ -16,9 +16,7 @@ theme: clean
 	         --exclude node_modules \
 	         --exclude README.md \
 	         --exclude Makefile \
-	         . build/stage
-	zip build/tedx.zip build/stage/*
-	rm -rf build/stage
+	         . build/tedx
 
 .PHONY: clean
 

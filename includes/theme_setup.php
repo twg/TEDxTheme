@@ -196,12 +196,15 @@ function tedx_customize_register ($wp_customize) {
     ));
 
   $wp_customize->add_control(
-    new Textarea_Custom_Control(
-      $wp_customize, 'twitter_follow_button', array(
+    'tedx_social_twitter_follow_button',
+    array(
+      'priority' => 8,
       'label'    => __('Twitter Follow Button', 'tedx'),
       'section'  => 'tedx_social',
       'settings' => 'twitter_follow_button',
-    )));
+      'type'     => 'text'
+    ));
+
 
   $wp_customize->add_setting(
     'twitter_account',
