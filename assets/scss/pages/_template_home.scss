@@ -1,6 +1,19 @@
 @import "../../../vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
 
 body.page-template-page_templatestemplate_home-php {
+
+  .post-excerpt {
+    h4 {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
   .banner {
     color: #FFF;
     text-align: center;

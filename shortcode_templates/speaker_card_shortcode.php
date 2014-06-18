@@ -9,7 +9,6 @@
       $excerpt     = $speaker->post_excerpt;
       $description = get_post_meta($speaker->ID, '_speaker_video_description', true);
       $image       = wp_get_attachment_image_src(get_post_thumbnail_id($speaker->ID), 'speaker');
-      print_r($image);
       if (is_array($image) && !empty($image[0])) {
         $image = $image[0];
       }
@@ -20,28 +19,17 @@
           <div class="speaker-description" style="background-image: url(<?= $image ?>);">
             <div class="speaker-border"></div>
             <div class="speaker-info">
-              <div class="speaker-title">
-                Speaker
-              </div>
-              <h2>
-                <?= $name; ?>
-              </h2>
+              <div class="speaker-title">Speaker</div>
+              <h2><?= $name; ?></h2>
 
-              <div class="speaker-position">
-                <?= $excerpt ?>
-              </div>
+              <div class="speaker-position"><?= $excerpt ?></div>
             </div>
-
           </div>
           <!-- .speaker-title -->
           <div class="speaker-video-thumb">
             <div class="hover-container">
               <div class="hover-table">
-                <div>
-                    <span>
-                      See Intro Video
-                    </span>
-                </div>
+                <div><span>See Intro Video</span></div>
               </div>
             </div>
             <img src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg">

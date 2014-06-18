@@ -180,6 +180,13 @@ body {
   padding-top: 10px;
   padding-bottom: 50px; }
 
+body.page-template-page_templatestemplate_home-php .post-excerpt h4 {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 10px;
+  line-height: 1.4; }
+body.page-template-page_templatestemplate_home-php .post-excerpt img {
+  width: 100%; }
 body.page-template-page_templatestemplate_home-php .banner {
   color: #FFF;
   text-align: center;

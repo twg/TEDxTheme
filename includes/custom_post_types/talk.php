@@ -22,13 +22,35 @@ class TalkPostType {
 
   function talk_shortcode ($atts) {
     $a = shortcode_atts(array(
-      'year' => '',
+      'year'     => '',
+      'title'    => '',
+      'location' => 'archive',
+      'limit'    => ''
     ), $atts);
-    $year = $a['year'];
-    $talks = $this->get_talks_from_year($year);
+
+    $limit        = $a['limit'];
+    $for_homepage = ($a['location'] == 'homepage');
+
+    if (empty($limit)) {
+      if ($for_homepage) {
+        $limit = 6;
+      } else {
+        $limit = 1000;
+      }
+    } else {
+      $limit = intval($limit);
+    }
+
+
+    $year  = $a['year'];
+    $title = $a['title'];
+
+
+    $talks = $this->get_talks_from_year($year, $limit);
     ob_start();
     require(get_template_directory() . '/shortcode_templates/talk_shortcode.php');
     $output = ob_get_clean();
+
     return $output;
   }
 
@@ -299,10 +321,10 @@ class TalkPostType {
     }
   }
 
-  function get_talks_from_year ($slug) {
+  function get_talks_from_year ($slug, $limit = 1000) {
     $arguments = array(
       'post_type'      => 'talk',
-      'posts_per_page' => 1000,
+      'posts_per_page' => $limit,
       'tax_query'      => array(
         array(
           'taxonomy' => 'talk_years',

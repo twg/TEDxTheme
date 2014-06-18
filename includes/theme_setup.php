@@ -8,7 +8,10 @@ $sidebar_settings = [
 ];
 register_sidebar(array_merge($sidebar_settings, ['name' => 'Blog Sidebar', 'id' => 'blog-sidebar']));
 register_sidebar(array_merge($sidebar_settings, ['name' => 'Page Sidebar', 'id' => 'page-sidebar']));
+register_sidebar(array_merge($sidebar_settings, ['name' => 'Home Sidebar', 'id' => 'home-sidebar']));
 
+add_image_size('post-sticky', 688, 350, true);
+add_image_size('post-unsticky', 440, 240, true);
 
 function tedx_customize_register ($wp_customize) {
 
