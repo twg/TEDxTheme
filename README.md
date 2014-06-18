@@ -34,13 +34,3 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 * `npm install` - Install development dependencies
 * `gulp watch` - Starts the Grunt task that builds css and js. Also has a livereload server running
 * `gulp vendor-js vendor-css` - Concats and minifies Bower dependencies into a single `plugin.min.js` file. These dependencies are declared in the `Gulpfile.js`. To add a new plugin we recommend installing it with Bower and then declaring it in the gulp file.
-
-### Custom Post Types
-
-#### Partners
-
-#### Speaker
-
-#### Talk
-
-#### Team
