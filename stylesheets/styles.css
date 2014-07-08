@@ -4,43 +4,33 @@
   clear: both;
 }
 
-body {
-}
-
-.wrapper{
-  width: 940px;
-  margin:0 auto;
-}
-
 .rouge {
   color: #EE3623;
 }
 
+.item-padding{
+  padding-top: 80px;
+}
+
 /*========================================================================================*/
-.hero-nav{
+.wrapper-hero-nav{
   width: 100%;
-  height: 600px;
+  max-height: 600px;
   background: url("../images/hero_bg@2x.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-@media (max-width: 1025px) {
-  .hero-nav{
-    background-size: cover;
-  }
 }
 
 .hero-nav img.logo{
   display: inline-block;
   position: relative;
   top: 20px;
-  left: 30px;
+/*  left: 30px;*/
 }
 
 .hero-nav img.laptop{
   position: relative;
-  bottom: -30px;
+  bottom: -40px;
   display: block;
   margin: 0 auto;
 }
@@ -50,7 +40,7 @@ body {
   float: right;
   position: relative;
   top: 30px;
-  right: 30px;
+/*  right: 30px;*/
 }
 
 .hero-nav div.nav-bar li{
@@ -75,7 +65,6 @@ body {
 
 .call-2-action{
   display: block;
-  width: 450px;
   margin: 0 auto;
   text-align: center;
 }
@@ -89,6 +78,7 @@ body {
 }
 
 .call-2-action h3{
+  max-width: 450px;
   font-family: Helvetica, Arial;
   font-size: 18px;
   font-weight: 100;
@@ -118,72 +108,52 @@ body {
   background-color: white;
 }
 
-.customization img.customization-icon {
-  position: relative;
-  top: 50px;
-  left: 110px;
-}
-
-.customization div.right-content {
-  float: right;
-  width: 417px;
-  position: relative;
-  top: 85px;
-  right: 138px;
+.customization div.content {
   color: #323232;
+  padding-top: 10px;
 }
 
-.customization div.right-content h3 {
+.customization div h3 {
   font-size: 25px;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 200;
   margin-bottom: 10px
 }
 
-.customization div.right-content p{
+.customization div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
 }
 
-.customization div.right-content a{
+.customization div a{
   text-decoration: none;
 }
 
 /*========================================================================================*/
 
-.layout {
+.wrapper-layout {
   height: 310px;
   background-color: #EEEEEE;
 }
 
-.layout img.responsive-icon {
-  float: right;
-  position: relative;
-  top: -50px;
-  right: 135px;
-}
-
-.layout div.left-content {
-  width: 255px;
-  position: relative;
-  top: 111px;
-  left: 155px;
+.layout div.content{
+  padding-top: 10px;
   color: #323232;
 }
 
-.layout div.left-content h3 {
+.layout div h3 {
   font-size: 25px;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 200;
   margin-bottom: 10px;
 }
 
-.layout div.left-content p{
+.layout div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
 }
 
-.layout div.left-content p span.red-text{
+.layout div p span.red-text{
   color: #EE3623;
 }
 
@@ -195,39 +165,29 @@ body {
   background-color: white;
 }
 
-.support img.support-icon {
-  position: relative;
-  top: 50px;
-  left: 100px;
-}
-
-.support div.right-content {
-  float: right;
-  width: 417px;
-  position: relative;
-  top: 96px;
-  right: 138px;
+.support div.content{
+  padding-top: 10px;
   color: #323232;
 }
 
-.support div.right-content h3 {
+.support div h3 {
   font-size: 25px;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 200;
   margin-bottom: 10px
 }
 
-.support div.right-content p{
+.support div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
 }
 
-.support div.right-content p span.red-text{
+.support div p span.red-text{
   color: #EE3623;
 }
 
 /*========================================================================================*/
-footer {
+.wrapper-footer {
   background-color: #171717;
   margin: 0;
 }
@@ -240,14 +200,6 @@ footer p{
   color: white;
   opacity: 0.6;
 
-}
-
-footer div.footer-links {
-  display: inline-block;
-  float: right;
-  position: relative;
-  top: -60px;
-  right: 30px;
 }
 
 footer div.footer-links a {
@@ -278,3 +230,80 @@ footer p a:hover{
 footer div.footer-links a:hover {
   opacity: 1;
 }
+
+/*========================================================================================*/
+
+@media only screen and (max-width: 1024px){
+  .wrapper-hero-nav {
+    min-height: 280px;
+    background-size:100%;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .wrapper-hero-nav{
+    background-size:120%;
+    }
+  .item-padding {
+    padding: 0;
+  }
+  /*========================================================================================*/
+  .customization {
+    height: 350px;
+  }
+
+  .customization img{
+    padding-top: 20px;
+  }
+
+  .customization div h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .customization div p {
+    text-align: center;
+  }
+  /*========================================================================================*/
+  .layout {
+    height: 350px;
+  }
+
+  .layout img{
+    padding-top: 20px;
+  }
+
+  .layout div h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .layout div p {
+    text-align: center;
+  }
+
+  /*========================================================================================*/
+  .support {
+    height: 350px;
+  }
+
+  .support img{
+    padding-top: 20px;
+  }
+
+  .support div h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .support div p {
+    text-align: center;
+  }
+}
+
+/*========================================================================================*/
+  @media only screen and (max-width: 400px){
+    .wrapper-hero-nav {
+      background-size: 135% auto;
+    }
+  }
