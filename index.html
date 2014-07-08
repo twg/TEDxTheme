@@ -6,6 +6,7 @@
     <title>TEDxTheme by twg</title>
 
     <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/animate.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -37,7 +38,7 @@
     </section>
     <section class="customization">
       <div class="wrapper">
-        <img class="customization-icon" src="./images/customization_icon@2x.png" alt="Customization Icon">
+        <img class="customization-icon wow flipInX" src="./images/customization_icon@2x.png" alt="Customization Icon">
         <div class="right-content">
           <h3>
             Simple Customization
@@ -52,19 +53,19 @@
       <div class="wrapper">
         <div class="left-content">
           <h3>
-            Simple Customization
+            Responsive Layout
           </h3>
           <p>
             Built to adapt to any device, your site will look great across platforms.
           </p>
         </div>
-        <img class="responsive-icon" src="./images/responsive_icon@2x.png" alt="Responsive Icon">
+        <img class="responsive-icon wow zoomIn" src="./images/responsive_icon@2x.png" alt="Responsive Icon">
       </div>
     </section>
 
     <section class="support">
       <div class="wrapper">
-        <img class="support-icon" src="./images/support_icon@2x.png" alt="Support Icon">
+        <img class="support-icon wow rotateIn" src="./images/support_icon@2x.png" alt="Support Icon">
         <div class="right-content">
           <h3>
             Ongoing Support
@@ -88,5 +89,9 @@
         </div>
       </div>
     </footer>
+    <script src="javascripts/wow.js"></script>
+    <script>
+     new WOW().init();
+    </script>
   </body>
 </html>
