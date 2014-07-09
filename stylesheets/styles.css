@@ -208,6 +208,10 @@ footer div.footer-links a {
   opacity: .6;
 }
 
+footer div.footer-links ul{
+  padding-top: 10px;
+}
+
 footer div.footer-links li{
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
@@ -299,6 +303,12 @@ footer div.footer-links a:hover {
   .support div p {
     text-align: center;
   }
+}
+
+/*========================================================================================*/
+
+footer p {
+  text-align: center;
 }
 
 /*========================================================================================*/
