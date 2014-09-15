@@ -12,6 +12,10 @@
   padding-top: 80px;
 }
 
+.image{
+  padding-top: 20px;
+}
+
 /*========================================================================================*/
 .wrapper-hero-nav{
   width: 100%;
@@ -30,7 +34,7 @@
 
 .hero-nav img.laptop{
   position: relative;
-  bottom: -40px;
+  bottom: -36px;
   display: block;
   margin: 0 auto;
 }
@@ -110,19 +114,20 @@
 
 .customization div.content {
   color: #323232;
-  padding-top: 10px;
+  padding-top: 85px;
 }
 
 .customization div h3 {
   font-size: 25px;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 200;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .customization div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .customization div a{
@@ -137,7 +142,7 @@
 }
 
 .layout div.content{
-  padding-top: 10px;
+  padding-top: 85px;
   color: #323232;
 }
 
@@ -151,6 +156,7 @@
 .layout div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .layout div p span.red-text{
@@ -166,7 +172,7 @@
 }
 
 .support div.content{
-  padding-top: 10px;
+  padding-top: 50px;
   color: #323232;
 }
 
@@ -174,16 +180,21 @@
   font-size: 25px;
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-weight: 200;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .support div p{
   font-family: Helvetica, Arial;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .support div p span.red-text{
   color: #EE3623;
+}
+
+.support .created-by{
+  text-decoration: none;
 }
 
 /*========================================================================================*/
@@ -235,6 +246,35 @@ footer div.footer-links a:hover {
   opacity: 1;
 }
 
+.call-2-action-footer{
+  text-align: center;
+  background-color: #FF2828;
+  padding: 30px 50px 40px 50px;
+}
+
+.call-2-action-footer p{
+  font-size: 18px;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.call-2-action-footer a{
+  font-size: 12px;
+  text-decoration: none;
+  color: #FF2828;
+  font-family: Helvetica;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.call-2-action-footer a:hover{
+  background-color: rgb(222, 222, 222);
+
+}
 /*========================================================================================*/
 
 @media only screen and (max-width: 1024px){
@@ -245,6 +285,10 @@ footer div.footer-links a:hover {
 }
 
 @media only screen and (max-width: 640px){
+  .image{
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
   .wrapper-hero-nav{
     background-size:120%;
     }
@@ -253,11 +297,11 @@ footer div.footer-links a:hover {
   }
   /*========================================================================================*/
   .customization {
-    height: 350px;
+    height: 450px;
   }
 
-  .customization img{
-    padding-top: 20px;
+  .customization div.content{
+    padding-top: 0;
   }
 
   .customization div h3 {
@@ -269,12 +313,16 @@ footer div.footer-links a:hover {
     text-align: center;
   }
   /*========================================================================================*/
-  .layout {
-    height: 350px;
+  .wrapper-layout{
+    height: 455px;
   }
 
   .layout img{
     padding-top: 20px;
+  }
+
+  .layout div.content{
+    padding-top: 0;
   }
 
   .layout div h3 {
@@ -288,12 +336,17 @@ footer div.footer-links a:hover {
 
   /*========================================================================================*/
   .support {
-    height: 350px;
+    height: 480px;
   }
 
   .support img{
     padding-top: 20px;
   }
+
+  .support div.content{
+    padding-top: 0;
+  }
+
 
   .support div h3 {
     margin-top: 0;
@@ -315,5 +368,19 @@ footer p {
   @media only screen and (max-width: 400px){
     .wrapper-hero-nav {
       background-size: 135% auto;
+    }
+    .call-2-action h1{
+      font-size: 24px;
+    }
+
+    .support {
+      height: 380px;
+    }
+    .wrapper-layout{
+      height: 355px;
+    }
+
+    .customization {
+      height: 350px;
     }
   }
