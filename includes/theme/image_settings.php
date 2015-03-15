@@ -1,4 +1,4 @@
-<?
+<?php
 class TEDxImageSettings {
 
   function __construct() {
