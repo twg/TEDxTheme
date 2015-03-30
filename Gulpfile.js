@@ -99,7 +99,7 @@ gulp.task('clean', function() {
 
 //-- Default Task -----------------------------------------------------------
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts');
+  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'watch');
 });
 
 

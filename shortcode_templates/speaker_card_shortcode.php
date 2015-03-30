@@ -26,14 +26,16 @@
             </div>
           </div>
           <!-- .speaker-title -->
-          <div class="speaker-video-thumb">
-            <div class="hover-container">
-              <div class="hover-table">
-                <div><span>See Intro Video</span></div>
+          <?php if($video_id != ""): ?>
+            <div class="speaker-video-thumb">
+              <div class="hover-container">
+                <div class="hover-table">
+                  <div><span>See Intro Video</span></div>
+                </div>
               </div>
+              <img src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg">
             </div>
-            <img src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg">
-          </div>
+          <?php endif; ?>
           <!-- .speaker-video-thumb -->
         </a>
       </div>

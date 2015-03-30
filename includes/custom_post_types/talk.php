@@ -210,6 +210,8 @@ class TalkPostType {
     $screen = get_current_screen();
     if ($screen->post_type == 'talk') {
       $title = 'Enter talk name...';
+    } else {
+      $title = '';
     }
 
     return $title;

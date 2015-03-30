@@ -245,6 +245,8 @@ class ScheduleItemsPostType {
     $screen = get_current_screen();
     if ($screen->post_type == 'schedule_item') {
       $title = 'Enter label...';
+    } else {
+      $title = '';
     }
 
     return $title;
