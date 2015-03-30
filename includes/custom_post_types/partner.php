@@ -142,6 +142,8 @@ class PartnerPostType {
     $screen = get_current_screen();
     if ($screen->post_type == 'partner') {
       $title = 'Enter Partner name...';
+    } else {
+      $title = '';
     }
 
     return $title;
