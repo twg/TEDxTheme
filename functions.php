@@ -36,3 +36,30 @@ $SpeakerPostType = new SpeakerPostType();
 require_once 'includes/custom_post_types/schedule_items.php';
 $ScheduleItemsPostType = new ScheduleItemsPostType();
 
+/**  Enqueue necessary Javascript **/
+function txt_enqueue_scripts_and_css() {
+    //--  Register Scripts
+    wp_register_script('txt-google-maps', '//maps.google.com/maps/api/js?sensor=false');
+    wp_register_script('txt-jquery-migrate', '//code.jquery.com/jquery-migrate-1.2.1.min.js');
+    wp_register_script('txt-vendor-js', get_template_directory_uri() . '/dist/js/vendor.js', false, false, true);
+    wp_register_script('txt-application-js', get_template_directory_uri() . '/dist/js/application.js', false, false, true);
+
+    //--  Register Scripts
+    wp_register_style('txt-vendor', get_template_directory_uri() . '/dist/css/vendor.css');
+    wp_register_style('txt-application', get_template_directory_uri() . '/dist/css/application.css');
+
+
+    //--  Enqueue scripts
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('txt-jquery-migrate');
+    wp_enqueue_script('txt-vendor-js');
+    wp_enqueue_script('txt-application-js');
+    wp_enqueue_script('txt-google-maps');
+
+    //--  Enqueue CSS
+    wp_enqueue_style('txt-vendor');
+    wp_enqueue_style('txt-application');
+}
+
+//add_action('init', 'txt_enqueue_scripts_and_css');
+add_action('wp_enqueue_scripts', 'txt_enqueue_scripts_and_css');

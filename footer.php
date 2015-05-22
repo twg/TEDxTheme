@@ -26,8 +26,10 @@ $template_url = get_template_directory_uri();
 <?php wp_footer(); ?>
 
 <!-- Compiled JS -->
+<!--
 <script src="<?= $template_url; ?>/dist/js/vendor.js" type="text/javascript"></script>
 <script src="<?= $template_url; ?>/dist/js/application.js" type="text/javascript"></script>
+-->
 
 <!-- Live Reload -->
 <?php define('WP_ENV', 'development'); ?>
