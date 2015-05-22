@@ -45,8 +45,8 @@ function txt_enqueue_scripts_and_css() {
     wp_register_script('txt-application-js', get_template_directory_uri() . '/dist/js/application.js', false, false, true);
 
     //--  Register Scripts
-    wp_register_style('txt-vendor', get_template_directory_uri() . '/dist/css/vendor.css');
-    wp_register_style('txt-application', get_template_directory_uri() . '/dist/css/application.css');
+    wp_register_style('txt-vendor', get_template_directory_uri() . '/dist/css/vendor.min.css');
+    wp_register_style('txt-application', get_template_directory_uri() . '/dist/css/application.min.css');
 
 
     //--  Enqueue scripts
