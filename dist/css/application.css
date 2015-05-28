@@ -106,7 +106,7 @@ ul.inline {
   display: block; }
 
 .ico:before {
-  background: transparent url('/wp-content/themes/tedx/images/small-sprite-ico.png') no-repeat left top;
+  background: transparent url('../../images/small-sprite-ico.png') no-repeat left top;
   width: 20px;
   height: 20px;
   display: block;

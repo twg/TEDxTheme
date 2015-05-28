@@ -1,5 +1,5 @@
 //-- Initialize -------------------------------------------------------------
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   var team_tiles = $('.team-tile');
   if (team_tiles.length > 0) {
     $.each(team_tiles, function (index, value) {
@@ -40,6 +40,7 @@ angular.module('TEDxTheme', []);
 *   WordPress is making it very hard to write this properly. So please
 *   excuse the mess.
 */
+
 angular.module('TEDxTheme').controller('NavCtrl', function($scope) {
 
   $scope.toggleMenu = function() {
@@ -53,7 +54,7 @@ angular.module('TEDxTheme').controller('NavCtrl', function($scope) {
   };
 
   $scope.maxHeight = function() {
-    var count = $('nav.primary-nav ul.menu > li').length;
+    var count = jQuery(nav.primary-nav ul.menu > li').length;
     return count * 65; // 65px height for nav elements
   };
 

@@ -13,11 +13,6 @@
 
   <link href="//www.google-analytics.com" rel="dns-prefetch">
 
-  <!-- JQuery -->
-  <script src="//maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
   <!-- Favicons -->
   <link href="<?= $template_url; ?>/assets/img/favicons/favicon.ico" rel="shortcut icon">
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
@@ -25,10 +20,6 @@
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-
-  <!-- Compiled CSS -->
-  <link href='<?= $template_url; ?>/dist/css/vendor.min.css' type='text/css' media='all' rel='stylesheet'>
-  <link href='<?= $template_url; ?>/dist/css/application.min.css' type='text/css' media='all' rel='stylesheet'>
 
   <?php wp_head(); ?>
 </head>
